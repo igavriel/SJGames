@@ -1,1 +1,1 @@
-"# SJGames" 
+# SJGames - Steve Jackson Games
