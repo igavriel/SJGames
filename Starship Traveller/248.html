@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 248 - Green Blue Planet<A name="248" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        44[[44 Purple Star]]
+        248[[248 Small Green Blue Planet]]
+        333[[333 Double Star]]
+
+        248 --> 58 & 235
+        58 --> 235
+        235(235 Alien Ship) --> 133
+
+        133 -->285 & 264 & 198
+        
+        264 --> 182
+        285 --> 182
+        182 --> 23 & 84
+        23 --> 84
+        84 --> 270 & 40
+        40 --> 314
+        270 --> 314
+
+        314 --> 102 & 128 & 302
+        102(102 Fight) --> 240
+        128(128 Luck) --> 75
+        75 --> 90 & 213
+        90(90 Lost Officer) --> 336
+        302 --> 128 & 186
+        240 --> 128 & 302
+        186(186 Lost Officer) --> 336
+        213 --> 336
+        336 --> 44 & 333
+        198 --> 44 & 333
+        
+        44:::startPoint
+        248:::startPoint
+        333:::startPoint
+        128:::luck
+        58:::fight
+        90:::fight
+        102:::fight
+        186:::fight
+        235:::fight
+        
+        click 44 href "44.html" "44 Purple Star"
+        click 333 href "333.html" "333 Double Star"
+        click 248 href "248.html" "248 Missile"
+    </pre>
+</body>
+
+</html>

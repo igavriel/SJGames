@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 69 - Barren System<A name="69" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        69[[69 Barren System]]
+        174[[174 Fail]]
+        248[[248 Small Green Blue Planet]]
+        
+        69 --> 10 & 323
+        10(10 Luck) --> 123 & 154
+        123 --> 278 & 323
+        323 --> 248
+        154 --> 174
+        278 --> 248
+
+        69:::startPoint
+        248:::startPoint
+        174:::endPoint
+        10:::luck
+
+        click 69 href "69.html" "69 Barren System"
+        click 248 href "248.html" "248 Small Green Blue Planet"
+    </pre>
+</body>
+
+</html>

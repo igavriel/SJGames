@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 89 - Small Planet<A name="89" /></h1>
+    <pre class='mermaid'>
+    graph TD
+    
+        89[[89 Small Planet]]
+        253[[253 Large Grey Planet]]
+
+        89 --> 145 & 207
+        272 --> 159 & 31
+        145 --> 272 & 159 & 31
+        159(159 Luck) --> 31
+        31 --> 207
+        207 --> 253
+
+        89:::startPoint
+        253:::startPoint
+        159:::luck
+
+        click 89 href "89.html" "89 Small Planet"
+        click 253 href "253.html" "253 Large Grey Planet"
+    </pre>
+</body>
+
+</html>

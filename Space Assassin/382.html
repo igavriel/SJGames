@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 382 AI<A name="382" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        382[[382 AI]]
+        208[[208 Crescent door Cyrus]]
+        189[[189 Star door Fail]]
+        315[[315 Fail]]
+        333[[333 Fail]]
+        389[[389 Fail]]
+
+        382 --> 89 & 225
+        89(89 Light) --> 71
+        225(255 Time) --> 272 & 387
+        272(272 Real) --> 71
+        387(387 Ghost) --> 339 & 221
+        221(221 Cyrus) --> 329
+        339(339 Security) --> 71
+        71(71: 6 Simulatrum) --> 329
+        329 --> 131 & 375
+        375(375 Left) --> 131
+        131(131 Right) --> 169 & 36
+        169(169 Robotics Book) --> 36
+        36 --> 74 & 150
+        150 --> 207 & 112
+        112 --> 207
+        207 --> 279 & 243 & 315
+        243 --> 297 & 333
+        297 --> 369
+        279(279: 2 Sentinel) --> 351
+        74(74: 2 Sentinel) --> 351
+        351 --> 369
+
+        369(369 Ship Pilot) --> 18 & 94
+        18(18 Talk) --> 132 & 170
+        132 --> 37 & 56
+        56 --> 75
+        37 --> 75
+        170 --> 37 & 389
+    
+        94(94 Attack) --> 75
+        75 --> 189 & 208 & 113
+        113(113 Third door) --> 208 & 151
+        151 --> 208
+
+        208:::startPoint
+        382:::startPoint
+        189:::endPoint
+        315:::endPoint
+        333:::endPoint
+        389:::endPoint
+
+        click 382 href "382.html" "382 AI"
+        click 208 href "208.html" "208 Cyrus"
+    </pre>
+</body>
+
+</html>

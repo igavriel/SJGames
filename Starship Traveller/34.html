@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 34 - Blue Green Planet<A name="34" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        34[[34 Medium Blue Green Planet]]
+        261[[261 Little Grey Planet]]
+        329[[329 Large Red Planet]]
+
+        34 --> 13 & 203
+        13 --> 115 & 25 & 179
+        25(25 Meet) --> 115 & 179
+        179(179 Run away - Fight) --> 115
+        115 --> 170
+        170 --> 291 & 155
+        291 --> 101 & 199 & 155
+        155 --> 203
+
+        101(101 Medical Luck) --> 7 & 68
+        68 --> 210
+        7 --> 210
+        210(210 Luck) --> 107 & 219
+        107 --> 304
+        219 --> 249 & 146
+        146 --> 203
+        249(249 Lost Officer) --> 304
+
+        304 --> 203 & 199
+
+        199 --> 61 & 237
+        61(61 Fight) -->244 & 237
+        244 --> 274 & 131
+        131(131 Fight) --> 91
+        274 --> 91
+        237 --> 315
+        315 --> 91
+
+        91 --> 164
+        164 --> 227 & 203
+        227(227 Luck) --> 282 & 83
+        282 --> 203
+        83(83 Tip - Warp speed 3) --> 203
+
+        203 --> 126
+        126 --> 261 & 329
+
+        34:::startPoint
+        261:::startPoint
+        329:::startPoint
+        
+        83:::tip
+        61:::fight
+        131:::fight
+        179:::fight
+        249:::fight
+        101:::luck
+        210:::luck
+        227:::luck
+
+        click 34 href "34.html" "34 Medium Blue Green Planet"
+        click 261 href "261.html" "261 Little Grey Planet"
+        click 329 href "329.html" "329 Large Red Planet"
+    </pre>
+</body>
+
+</html>

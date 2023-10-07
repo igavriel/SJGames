@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 97 - Black Planet<A name="97" /></h1>
+    <pre class='mermaid'>
+    graph TD
+    
+        97[[97 Black Planet]]
+        104[[104 Greeny Grey Planet]]
+        137[[137 Space Station]]
+        313[[313 Fail]]
+        
+        97 --> 230
+        230 --> 56 & 277 & 151
+        56(56 Science Luck) --> 117 & 313
+        151(151 Luck) --> 313 & 14
+
+        277(277 Engine - Green Powder) --> 56 & 151
+        14 --> 27
+        117 --> 27
+
+        27 --> 104 & 137
+
+
+        97:::startPoint
+        104:::startPoint
+        137:::startPoint
+        313:::endPoint
+        151:::luck
+        277:::tip
+
+        click 97 href "97.html" "97 Black Planet"
+        click 104 href "104.html" "104 Greeny Grey Planet"
+        click 137 href "137.html" "137 Space Station"
+    </pre>
+</body>
+
+</html>

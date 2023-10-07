@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 104 - Greeny Grey Planet<A name="104" /></h1>
+    <pre class='mermaid'>
+    graph TD
+    
+        104[[104 Greeny Grey Planet]]
+        324[[324 End Scene]]
+
+        104 --> 118 & 296
+        118 --> 4 & 21
+        4(4 Kid) --> 148 & 85 & 120
+        148(148 Tip Star date 21) --> 229
+        85 --> 229
+        229 --> 191 & 298
+        298(298 Fight) --> 120
+        191 --> 120
+        21(21 Adult) --> 259
+        259 --> 120 & 54
+        54(54 Fight) --> 120
+
+        120 --> 296
+        296 --> 324
+
+        104:::startPoint
+        324:::startPoint
+        148:::tip
+        54:::fight
+        298:::fight
+
+        click 104 href "104.html" "104 Greeny Grey Planet"
+        click 324 href "324.html" "324 End Scene"
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 61 - Three Cleaners<A name="61" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        61[[61 Three Cleaners]]
+        88[[88 Capsule]]
+        102[[102 Planet]]
+        201[[201]]
+        309[[309 Planet Exit]]
+        345[[345 T-Junction]]
+    
+        61 --> 290
+        290 --> 125 & 362
+        362 --> 49 & 11
+        11 --> 201
+        201 --> 237 & 309
+        237 --> 273 & 309
+        273 --> 102
+        125 --> 30 & 163
+
+        subgraph Alien
+            30(30: 4 Leg Alien) --> 106 & 144 & 68
+            end
+
+        144 --> 163
+        106 --> 163
+        68 --> 163
+        163 --> 201
+        49 --> 125 & 87
+        87 --> 11
+        309 --> 345 & 50
+        50 --> 345 & 88
+
+        102 --Planet--> 309
+
+        61:::startPoint
+        88:::startPoint
+        102:::startPoint
+        201:::startPoint
+        309:::startPoint
+        345:::startPoint
+
+        click 61 href "61.html" "61 Three Cleaners"
+        click 201 href "61.html" "201"
+        click 88 href "88.html" "88 Capsule"
+        click 102 href "78-102-Planet.html" "102 Planet"
+        click 309 href "309.html" "309 Exit Planet"
+        click 345 href "345.html" "345 T-Junction"
+    </pre>
+</body>
+
+</html>

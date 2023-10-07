@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 208 Cyrus<A name="208" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        208[[208 Cyrus]]
+        400[[400 The End]]
+        38[[38 Fail]]
+        57[[57 Fail]]
+        76[[76 Fail]]
+        316[[316 Poison]]
+        
+        208 --> 244 & 280
+        244(244 Chat) --> 316 & 352
+        352 --> 262
+        262 --> 19 & 370
+        370 --> 171
+        19 --> 298 & 334
+        280 --> 226 & 262
+        226(226 Cards) --> 298 & 334
+        298(298 Infra red) --> 171
+        334 --> 133 & 57
+        133 --> 171 & 38
+        171 --> 95 & 152
+        152 --> 114 & 76
+        114(114 Cylinder) --> 95
+        95(95 Fight) --> 400
+
+        208:::startPoint
+        400:::startPoint
+        38:::endPoint
+        57:::endPoint
+        76:::endPoint
+        316:::endPoint
+        95:::fight
+
+        click 208 href "208.html" "208 Cyrus"
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 209 - Blue Planet<A name="209" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        44[[44 Purple Planet]]
+        209[[209 Dull Blue Planet]]
+        258[[258 Large Red Planet]]
+
+        209 --> 125 & 73 & 231
+        125 --> 177 & 231
+        177 --> 307 & 19
+        307(307 Fight) --> 241 & 19
+        241 --> 19
+        19 --> 73 & 231
+        231(231 Timol) -->42 & 334
+        42 --> 73 & 290
+        334 --> 290
+        73(73 Fioral) --> 161 & 103
+        161 --> 194 & 290
+        103(103 Fight) --> 150
+        150 --> 161 & 194 & 290
+
+        194(194 Information) --> 290
+        
+        290 --> 44 & 258
+
+        44:::startPoint
+        209:::startPoint
+        258:::startPoint
+        194:::tip
+        103:::fight
+        307:::fight
+    
+        click 44 href "44.html" "44 Purple Planet"
+        click 209 href "209.html" "209 Dull Blue Planet"
+        click 258 href "258.html" "258 Large Red Planet"
+    </pre>
+</body>
+
+</html>

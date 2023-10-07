@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 92 - Ganzig Ship<A name="92" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        89[[89 Small Planet]]
+        92[[92 Ganzig Ship]]
+        253[[253 Large Grey Planet]]
+        324[[324 End Scene]]
+
+        92 --> 335 & 5
+        5 --> 15 & 143
+        143(143 Fight) --> 185
+        335(335 Fight) --> 15 & 185
+
+        15 --> 157
+
+        157 --> 74 & 308 & 106
+        74(74 Authority - Tip Star date 77) --> 242
+
+        308(308 Recreation) --> 212 & 65
+        65(65 Fight) --> 242
+        212(212 Bar) --> 74 & 106
+        106(106 Maintenance) --> 242
+        242 --> 324
+        
+        185 --> 253 & 89
+        
+        89:::startPoint
+        92:::startPoint
+        253:::startPoint
+        324:::startPoint
+        74:::tip
+        65:::fight
+        143:::fight
+        335:::fight
+    
+        click 89 href "89.html" "89 Small Planet"
+        click 92 href "92.html" "92 Ganzig Ship"
+        click 253 href "253.html" "253 Large Grey Planet"
+        click 324 href "324.html" "324 End Scene"
+    </pre>
+</body>
+
+</html>

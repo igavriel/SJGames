@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section273 - Class D Star cruiser<A name="273" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        79[[79 Meteors]]
+        28[[28 Green Planet]]
+        260(260 Blue Planet)
+        288[[288 Fail]]
+
+        79 --> 254 & 283
+        283(283 Luck) --> 60
+        254(254 Luck) --> 167 & 228
+        228 --> 283
+        167 --> 60
+        60 --> 136 & 260
+        136 --> 28 & 260
+        
+        260 --> 288 & 136
+        
+        28:::startPoint
+        79:::startPoint
+        260:::startPoint
+        288:::endPoint
+        254:::luck
+        283:::luck
+    
+        click 28 href "28.html" "28 Green Planet"
+        click 79 href "79.html" "79 Meteors"
+    </pre>
+</body>
+
+</html>

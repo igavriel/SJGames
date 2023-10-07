@@ -1,0 +1,571 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+  const config = {
+    startOnLoad: true,
+    flowchart: { useMaxWidth: true, htmlLabels: true },
+    securityLevel: 'loose',
+  };
+
+  mermaid.initialize(config);
+</script>
+
+
+<body>
+  <li><a href="#1">Section 1</a></li>
+  <li><a href="#134">Section 134</a></li>
+  <li><a href="#247">Section 247</a></li>
+  <li><a href="#61">Section 61</a></li>
+  <li><a href="#88">Section 88</a></li>
+  <li><a href="#100">Section 100</a></li>
+  <li><a href="#172">Section 172</a></li>
+  <li><a href="#345">Section 345</a></li>
+  <li><a href="#373">Section 373</a></li>
+  <li><a href="#382">Section 382</a></li>
+  <li><a href="#369">Section 369</a></li>
+  <li><a href="#208">Section 208</a></li>
+
+  <table class="Tables">
+    <tr>
+      <td>
+        <h1>Section 1<A name="1" /></h1>
+        <pre class='mermaid'>
+          graph TD
+            1[[1]]
+            77[[77]]
+            134[[134]]
+
+            1 --> 20 & 58 & 39 & 77
+            39 --> 141 & 234
+            141(141 Device) --> 58 & 77
+            234 --> 58 & 77
+            58 --> 278 & 93
+            93 --> 77
+            278 --> 77
+            77 --> 134 & 103
+            103 --> 134 & 228 & 192
+            192 --> 228
+
+            subgraph Prison
+              20(20 Robot) --> 300
+              300(300 Prison) --> 318 & 63
+              228(228 Robot) --> 264
+              264(264 Prison) --> 318 & 63
+              318(318 Monster) --> 63
+              63(63 Tip) --> 318
+            end
+        
+            63 & 318 & 300 --> 134
+
+            style 1 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+            style 77 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+            style 134 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        </pre>
+      </td>
+      <td>
+        <h1>Section 134<A name="134" /></h1>
+        <pre class='mermaid'>
+        graph TD
+          134[[134]] --> 172 & 3
+          172[[172]]
+          247[[247]]
+
+          60 & 3 & 79 & 117 --> 172
+        
+          subgraph Lab
+            3(3 Lab) --> 60 & 41
+            41 --> 79 & 117
+            60(60 Keys) --> 98
+            79 --> 117
+            117 --> 155 & 32
+            32 --> 155
+          end
+        
+          98 --> 174 & 229
+          155 --> 98
+        
+          174(174 Kitchen) --> 229
+          229(229 Robot) --> 301 & 211
+          301 --> 211
+          211(211 Robot) --> 247
+
+          style 134 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 172 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 247 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>Section 247<A name="247" /></h1>
+        <pre class='mermaid'>
+        graph TD
+          247[[247]]
+      
+          337[[337 Fail]]
+          388[[388 Fail]]
+          61[[61 Three Cleaners]]
+          78[[78 Planet]]
+          309[[309 Planet Exit]]
+      
+          247 --> 283 & 319 & 80
+          205 --> 80 & 319
+      
+          subgraph Code
+            283(283 Code) --> 399 & 385 & 376
+            399(399 Blue) --> 337
+            354(354 Blue) --> 337
+            385(385 Green) --> 337
+            205(205 Green)
+            376(376 Red) --> 354 & 205
+          end
+      
+          319(319 Laser Ball) --> 4
+          4(4: Gas Can, Crust, 3 Food) --> 42 & 80
+          42(42 Food) --> 80
+          80 --> 137 & 398
+          137(137 Books) --> 398
+          398 --> 230 & 118
+      
+          subgraph Squirrel
+            230(230 Squirrel) --> 99 & 372
+            372 --> 388 & 393 & 118
+            393 --> 118
+            99 --> 379 & 54
+            54 --> 388 & 118
+            379 --> 118 & 186 & 388
+            186(186 Fruit) --> 118
+          end
+      
+          118 --> 23 & 156 & 61
+          156 --> 166
+          23 --> 166
+          166 --> 78
+
+          78 --Planet--> 309
+      
+          style 61 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 78 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 247 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 309 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 337 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 388 fill:#FF0000,stroke:#770000,stroke-width:2px
+        </pre>
+      </td>
+      <td>
+        <h1>Section 61: 3 Cleaners<A name="61" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          61[[61 Three Cleaners]]
+          88[[88 Capsule]]
+          102[[102 Planet]]
+          201[[201]]
+          309[[309 Planet Exit]]
+          345[[345 T-Junction]]
+      
+          61 --> 290
+          290 --> 125 & 362
+          362 --> 49 & 11
+          11 --> 201
+          201 --> 237 & 309
+          237 --> 273 & 309
+          273 --> 102
+          125 --> 30 & 163
+          30(30: 4 Leg Alien) --> 106 & 144 & 68
+          144 --> 163
+          106 --> 163
+          68 --> 163
+          163 --> 201
+          49 --> 125 & 87
+          87 --> 11
+          309 --> 345 & 50
+          50 --> 345 & 88
+
+          102 --Planet--> 309
+      
+          style 61 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 88 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 102 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 201 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 309 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 345 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>Section 88<A name="88" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          88[[88 Capsule]]
+          345[[345 T-Junction]]
+      
+          88 --> 164 & 126
+          164 --> 31 & 274
+          274(274 Man) --> 346 & 310
+          310 --> 346 & 292
+          346 --> 220
+          292(292 Bat) --> 220 & 256
+          256 --> 220 & 364 & 328
+          220 --> 13
+          364(364 Alien Book) --> 13
+          328(328 Pan-Dimension Device) --> 13
+          13(13 Tharn Doppelganger) --> 31 & 126
+          31(31 Spider) --> 69 & 107 & 183 & 126
+          69 --> 274 & 126
+          126 --> 345
+          183 --> 202 & 238 & 69 & 126 & 107
+          107 --> 145
+          202(202 Crust) --> 145
+          238(238 Alien Book) --> 145
+          145(145 Formula Four) --> 274 & 126
+      
+          style 88 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 345 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        </pre>
+      </td>
+      <td>
+        <h1>Section 345<A name="345" /></h1>
+        <pre class='mermaid'>
+        graph TD
+          345[[345 T-Junction]]
+          373[[373 Alien]]
+      
+          345 --> 70 & 219
+          219 --> 70 & 395
+      
+          subgraph Bio Lab
+            395(395 Bio Lab) --> 291 & 327
+            291 --> 363 & 12
+            363(363 Tip) --> 327
+            12 --> 327
+          end
+      
+          327 --> 70
+      
+          subgraph Village
+            70(70 Village) --> 108 & 146 & 184
+            108(108 Two Guards) --> 203
+            146 --> 108 & 239 
+            184 --> 275 & 311 & 347 & 396 & 108 & 146
+            275(275 Gas Can) --> 108 & 203
+            311(311 Cards) --> 146
+          end
+          347(347 Container) --> 109 & 257
+          
+          396(396 Device) --> 203
+      
+          203 --> 109 & 257
+          257(257 Kitchen) --> 293 & 109
+          293(293 Rest) --> 109
+          239 --> 203
+      
+          subgraph Pool
+            109(109 Pool) --> 147 & 185
+            185 --> 204 & 240
+            204 --> 276 & 312
+            276(276 Granade) --> 294 & 330
+            294 --> 312
+            330 --> 312
+            312(312 Octopus) --> 366
+          end
+      
+          366 -->373
+          147 --> 373
+      
+          style 345 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 373 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>Section 172<A name="172" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          100[[100]]
+          172[[172]]
+          116[[116 Fail]]
+          154[[154 Fail]]
+      
+          172 --> 175 & 59 & 191
+          175 --> 194 & 266
+          59 --> 175 & 135
+          135 --> 175
+          191 --> 59 & 175 & 342
+          342 --> 263 & 299 & 335
+          299 --> 209
+          263 --> 209
+          209 --> 245 & 335
+          335 --> 59 & 175
+          
+          subgraph Bomb
+            245(245: 6 Min) --> 21 & 281
+            21(21: 5 Min) --> 353
+            281(281: 5 Min) --> 317 & 353
+            353(353: 3 Min) --> 40
+            317(317: 4-3 Min)--> 2
+            2(2: 1 Min) --> 120
+            120 --> 154
+            40 --> 154 & 116
+          end
+      
+          194 --> 266 & 356
+          266(266 Man) --> 302 & 320 & 284
+          302 --> 212 & 338
+          338(338 Technician) --> 248
+          212 --> 248
+          248 --> 356
+          320 --> 356
+          284 --> 356
+          356 --> 5 & 100
+      
+          subgraph 6 Robots
+            5(5: 6 Robots) --> 43 & 157 & 24
+            24 --> 62
+            43(43 Fight) --> 81 & 119
+            81(81 Granade) --> 62
+            119 --> 62
+            157(157 Talk) --> 62
+          end
+      
+          62 --> 100
+      
+          style 100 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 172 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 116 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 154 fill:#FF0000,stroke:#770000,stroke-width:2px
+        </pre>
+      </td>
+      <td>
+        <h1>Section 100<A name="100" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          78[[78 Planet]]
+          100[[100]]
+          201[[201]]
+          309[[309 Planet Exit]]
+
+          100 --> 138 & 267
+          138(138 Blade) --> 195
+          195 --> 231 & 267
+          231(231 Suit) --> 267
+          267(267: 8 Prtabots) --> 303
+          303 --> 249 & 213
+      
+          213 --> 10 & 23 & 156
+          249 --> 285
+          285(285 Armory) --> 321 & 357
+          321 --> 6
+          357 --> 6
+          6 --> 213
+      
+          156 --> 166
+          23 --> 166
+          166 --> 78
+          10 --> 200 & 48
+      
+          48(48 Chopper) --> 124
+          124(124 Items) --> 162
+          162 --> 29 & 67 & 105 & 143
+          29(29 Plastic Cylinder) --> 181
+          67(67 Book in case) --> 181
+          105(105 Cardboard Packet) --> 181
+          143(143 Ink bottle) --> 181
+          181 --> 162 & 200
+      
+          200 --> 308 & 236
+          236 --> 308
+          308(308 Bug) --> 344
+          344 --> 218 & 254
+          218 --> 254
+          254 --> 201
+
+          78 --Planet--> 309
+
+          style 78 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 100 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 201 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 309 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>Section 373<A name="373" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          15[[15 Question]]
+          373[[373 Alien]]
+          381[[381 Simulator Start]]
+          190[[190 Simulator Exit]]
+          382[[382 AI]]
+      
+          72[[72 Fail]]
+          86[[86 Fail]]
+          90[[90 Fail]]
+          129[[129 Fail]]
+          384[[384 Fail]]
+          378[[378 Fail]]
+      
+          373 --> 15 & 295 & 383
+          383(383 Fight) --> 392
+          392 --> 97
+          295 --> 326 & 377 & 367 & 390
+          377(377 Device) --> 97
+          367(367 Cardboard Packet) --> 149 & 259
+          326(326 Alien Book) --> 15 & 383
+          390(390 Squirrel) --> 111 & 92
+          92 --> 15 & 383
+          111 --> 97
+          149 --> 97
+          259 --> 383
+          97 --> 51 & 381 & 34
+          51(51 Bomb) --> 14
+          14(14 Black balls) --> 382 & 90 & 381 & 34
+          34 --> 378 & 44
+          44 --> 86 & 360
+          360 --> 72 & 129
+
+          381 --Simulator--> 190
+          190 --> 52 & 165
+          52(52 Gravity Bomb) --> 332
+          332(332 Riddle Floor)
+          165(165 Toroid) --> 384 & 332
+      
+          style 190 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 381 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 384 fill:#FF0000,stroke:#770000,stroke-width:2px
+      
+          style 15 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 373 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 381 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 382 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+      
+          style 72 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 86 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 90 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 129 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 378 fill:#FF0000,stroke:#770000,stroke-width:2px
+        </pre>
+      </td>
+      <td>
+        <h1>Section 382 AI<A name="382" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          382[[382 AI]]
+          369[[369 Ship Pilot]]
+          315[[315 Fail]]
+          333[[333 Fail]]
+      
+          382 --> 89 & 225
+          89(89 Light) --> 71
+          225(255 Time) --> 272 & 387
+          272(272 Real) --> 71
+          387(387 Ghost) --> 339 & 221
+          221(221 Cyrus) --> 329
+          339(339 Security) --> 71
+          71(71: 6 Simulatrum) --> 329
+          329 --> 131 & 375
+          375(375 Left) --> 131
+          131(131 Right) --> 169 & 36
+          169(169 Robotics Book) --> 36
+          36 --> 74 & 150
+          150 --> 207 & 112
+          112 --> 207
+          207 --> 279 & 243 & 315
+          243 --> 297 & 333
+          297 --> 369
+          279(279: 2 Sentinel) --> 351
+          74(74: 2 Sentinel) --> 351
+          351 --> 369
+      
+          style 369 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 382 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 315 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 333 fill:#FF0000,stroke:#770000,stroke-width:2px
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>Section 369 Ship Pilot<A name="369" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          369[[369 Ship Pilot]]
+          208[[208 Crescent door Cyrus]]
+          189[[189 Star door Fail]]
+          389[[389 Fail]]
+      
+          369 --> 18 & 94
+          18(18 Talk) --> 132 & 170
+          132 --> 37 & 56
+          56 --> 75
+          37 --> 75
+          170 --> 37 & 389
+      
+          94(94 Attack) --> 75
+          75 --> 189 & 208 & 113
+          113(113 Third door) --> 208 & 151
+          151 --> 208
+      
+          style 208 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 369 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 189 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 389 fill:#FF0000,stroke:#770000,stroke-width:2px
+        </pre>
+      </td>
+      <td>
+        <h1>Section 208 Cyrus<A name="208" /></h1>
+        <pre class='mermaid'>
+          graph TD
+          208[[208 Cyrus]]
+          400[[400 The End]]
+          38[[38 Fail]]
+          57[[57 Fail]]
+          76[[76 Fail]]
+          316[[316 Poison]]
+      
+          208 --> 244 & 280
+          244(244 Chat) --> 316 & 352
+          352 --> 262
+          262 --> 19 & 370
+          370 --> 171
+          19 --> 298 & 334
+          280 --> 226 & 262
+          226(226 Cards) --> 298 & 334
+          298(298 Infra red) --> 171
+          334 --> 133 & 57
+          133 --> 171 & 38
+          171 --> 95 & 152
+          152 --> 114 & 76
+          114(114 Cylinder) --> 95
+          95(95 Fight) --> 400
+      
+      
+          style 208 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+          style 400 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+      
+          style 38 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 57 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 76 fill:#FF0000,stroke:#770000,stroke-width:2px
+          style 316 fill:#FF0000,stroke:#770000,stroke-width:2px
+        </pre>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+</body>
+
+</html>

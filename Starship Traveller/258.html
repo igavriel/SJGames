@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 258 - Large Red Planet<A name="258" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        44[[44 Purple Planet]]
+        79[[79 Meteors]]
+        258[[258 Large Red Planet]]
+        
+        258 --> 300 & 163
+        300 --> 276 & 112 & 220
+        112 --> 220
+        276 --> 220
+        220 --> 55 & 325
+        55(55 Library Tip - Black hole sector 288) --> 130
+        325(325 Building Tip - Space warp star date 45) --> 130
+
+        130 --> 233 & 292
+
+        292 --> 233
+        233 --> 44 & 79
+        163 --> 44 & 79
+        
+        44:::startPoint
+        79:::startPoint
+        258:::startPoint
+        55:::tip
+        325:::tip
+    
+        click 44 href "44.html" "44 Purple Planet"
+        click 79 href "79.html" "79 Meteors"
+        click 258 href "258.html" "258 Large Red Planet"
+    </pre>
+</body>
+
+</html>

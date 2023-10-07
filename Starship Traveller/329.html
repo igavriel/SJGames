@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 329 - Large Red Planet<A name="329" /></h1>
+    <A name="221" />
+    <pre class='mermaid'>
+    graph TD
+        63[[63 Fail]]
+        92[[92 Ganzig Ship]]
+        253[[253 Large Grey Planet]]
+        329[[329 Large Red Planet]]
+        35[[35 Science]]
+        221[[221 Admiral]]
+        299[[299 Computer]]
+
+        329 --> 132 & 316
+        132 --> 289 & 189
+        289(289 Science) --> 275 & 251
+        275 --> 124
+        124(124 Luck) --> 48 & 251
+        189(189 Luck) --> 175 & 149
+        149 --> 48
+        175 --> 251
+        251(251 Luck) --> 234 & 208
+        234 --> 95
+        95(95 Fight) --> 76 & 63
+        76 --> 48
+        208(208 Fight) --> 234 & 48
+
+        48 --> 35 & 221 & 299
+
+        221 --> 35  & 162 & 299
+        162 --> 316
+        316 --> 253 & 92
+
+        35:::startPoint
+        221:::startPoint
+        299:::startPoint
+        92:::startPoint
+        253:::startPoint
+        329:::startPoint
+        63:::endPoint
+        124:::luck
+        189:::luck
+        251:::luck
+        95:::fight
+        208:::fight
+
+        click 35 href "#35" "35 Science"
+        click 221 href "#221" "221 Admiral"
+        click 299 href "#299" "299 Computer"
+
+        click 92 href "92.html" "92 Ganzig Ship"
+        click 253 href "253.html" "253 Large Grey Planet"
+        click 329 href "329.html" "329 Large Red Planet"
+    </pre>
+
+    <h1>Section 35 Science<A name="35" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        35[[35 Science]]
+        221[[221 Admiral]]
+        299[[299 Computer]]
+
+        35  --> 24 & 9
+        9 --> 221 & 299
+        24 --> 81 & 221 & 299
+        81 --> 221 & 299
+
+        35:::startPoint
+        221:::startPoint
+        299:::startPoint
+
+        click 35 href "#35" "35 Science"
+        click 221 href "#221" "221 Admiral"
+        click 299 href "#299" "299 Computer"
+    </pre>
+
+    <h1>Section 299 - Computer<A name="299" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        181[[181 Fail]]
+        35[[35 Science]]
+        221[[221 Admiral]]
+        299[[299 Computer]]
+
+        299 --> 268 & 35 & 221
+
+        268(268 Luck) --> 139 & 70
+        70 --> 35 & 221
+        139(139 Luck) --> 181 & 119
+        119 --> 70
+
+        181:::endPoint
+        35:::startPoint
+        221:::startPoint
+        299:::startPoint
+        139:::luck
+        268:::luck
+
+        click 35 href "#35" "35 Science"
+        click 221 href "#221" "221 Admiral"
+        click 299 href "#299" "299 Computer"
+    </pre>
+</body>
+
+</html>

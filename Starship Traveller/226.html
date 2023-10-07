@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 226 - Asteroid<A name="226" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        69[[69 Barren System]]
+        248[[248 Missile]]
+        226[[226 Asteroid]]
+
+        226 --> 69 & 327
+
+        327(327 Dilibrium) --> 204 & 190 & 47
+        204 --> 165 & 47
+        165 --> 248
+        47 --> 30 & 96 & 217 & 295
+        30 --> 165 & 190
+        96 --> 190
+        190(190 Lost Officer) --> 327 & 69
+        217 --> 30 & 96 & 295
+        295 --> 110 & 252
+        110(110 Lost Officer) --> 327 & 69
+        252 --> 165
+        
+        69:::startPoint
+        226:::startPoint
+        110:::fight
+        190:::fight
+        248:::fight
+    
+        click 69 href "69.html" "69 Barren System"
+        click 226 href "226.html" "226 Asteroid"
+        click 248 href "69.html" "248 Missile"
+    </pre>
+</body>
+
+</html>

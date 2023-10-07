@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 324 - End Scene<A name="324" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        216[[216 Calculate black hole]]
+        324[[324 End Scene]]
+        339[[339 Fail]]
+        340[[340 The End]]
+
+        324 --> 216 & 197
+        197 --> 80
+        80 --> 59
+        59 --> 339
+
+        216 --> A1 & A2 & A3
+        216 --> B1 & B2 & B3
+        216 --> C1 & C2 & C3
+        
+        A1(288 - 77) --> 211 --> 339
+        A2(288 - 45) --> XXX
+        A3(288 - 21) --> 267 --> 339
+        B1(159 - 77) --> 82 --> 339
+        B2(159 - 45) --> 114 --> 339
+        B3(159 - 21) --> 138 --> 340
+        C1(83 - 77) --> 6 --> 339
+        C2(83 - 45) --> 38 --> 339
+        C3(83 - 21) --> 62 --> 339
+
+        324:::startPoint
+        340:::startPoint
+        339:::endPoint
+        216:::luck
+    
+        click 324 href "324.html" "324 End Scene"
+    </pre>
+
+    <h1>Tips</h1>
+    <pre class='mermaid'>
+    graph TD
+        55(55 Library Tip - Black hole sector 288) -->
+        232(232 Tip Black hole sector 159) -->
+        280(280 Tip Black hole sector 083)
+
+        74(74 Authority - Tip Star date 77) -->
+        325(325 Building Tip - Space warp star date 45) -->
+        148(148 Tip Star date 21) -->
+        83(83 Tip - Warp speed 3)
+    </pre>
+</body>
+
+</html>

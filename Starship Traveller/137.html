@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 137 - Space Station<A name="137" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        137[[137 Space Station]]
+        324[[324 End Scene]]
+
+        137 --> 50 & 294 & 324
+
+        50(50 Trade: Yellow Powder or Green Metal) --> 157 & 294
+        157 --> 74 & 308 & 106
+        74(74 Authority - Tip Star date 77) --> 242
+
+        308(308 Recreation) --> 212 & 65
+        65(65 Fight) --> 242
+        212(212 Bar) --> 74 & 106
+        106(106 Maintenance) --> 242
+
+        294 --> 262 & 324
+        262(262 Lost Officer) --> 157 & 324
+        242 --> 324
+        
+        137:::startPoint
+        324:::startPoint
+        74:::tip
+        65:::fight
+        262:::fight
+        
+        click 137 href "137.html" "137 Space Station"
+        click 324 href "324.html" "324 End Scene"
+    </pre>
+</body>
+
+</html>

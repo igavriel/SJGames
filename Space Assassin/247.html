@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 247<A name="247" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        247[[247]]
+        337[[337 Fail]]
+        388[[388 Fail]]
+        61[[61 Three Cleaners]]
+        78[[78 Planet]]
+        309[[309 Exit Planet]]
+    
+        247 --> 283 & 319 & 80
+        205 --> 80 & 319
+    
+        subgraph Code
+            classDef red stroke:#f00, fill: #FA0
+            classDef green stroke:#0f0, fill: #0FA
+            classDef blue stroke:#00f, fill: #0AF
+            376:::red
+            205:::green
+            385:::green
+            399:::blue
+            354:::blue
+
+            283(283 Code) --> 399 & 385 & 376
+            399(399 Blue) --> 337
+            354(354 Blue) --> 337
+            385(385 Green) --> 337
+            205(205 Green)
+            376(376 Red) --> 354 & 205
+        end
+    
+        319(319 Laser Ball) --> 4
+        4(4: Gas Can, Crust, 3 Food) --> 42 & 80
+        42(42 Food) --> 80
+        80 --> 137 & 398
+        137(137 Books) --> 398
+        398 --> 230 & 118
+    
+        subgraph Squirrel
+            230(230 Squirrel) --> 99 & 372
+            372 --> 388 & 393 & 118
+            393 --> 118
+            99 --> 379 & 54
+            54 --> 388 & 118
+            379 --> 118 & 186 & 388
+            186(186 Fruit) --> 118
+        end
+    
+        118 --> 23 & 156 & 61
+        156 --> 166
+        23 --> 166
+        166 --> 78
+        
+        78 --Planet--> 309
+        
+        61:::startPoint
+        78:::startPoint
+        247:::startPoint
+        309:::startPoint
+        337:::endPoint
+        388:::endPoint
+
+        click 61 href "61.html" "61 Three Cleaners"
+        click 78 href "78-102-Planet.html" "78 Planet"
+        click 247 href "247.html" "247"
+        click 309 href "309.html" "309 Exit Planet"
+    </pre>
+</body>
+
+</html>

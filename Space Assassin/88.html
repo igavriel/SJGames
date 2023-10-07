@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 88<a name="88" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        88 --> 164 & 126
+        164 --> 31 & 274
+        274(274 Man) --> 346 & 310
+        310 --> 346 & 292
+        346 --> 220
+        292(292 Bat) --> 220 & 256
+        256 --> 220 & 364 & 328
+        220 --> 13
+        364(364 Alien Book) --> 13
+        328(328 Pan-Dimension Device) --> 13
+        13(13 Tharn Doppelganger) --> 31 & 126
+        31(31 Spider) --> 69 & 107 & 183 & 126
+        69 --> 274 & 126
+        126 --> 345
+        183 --> 202 & 238 & 69 & 126 & 107
+        107 --> 145
+        202(202 Crust) --> 145
+        238(238 Alien Book) --> 145
+        145(145 Formula Four) --> 274 & 126
+
+        88:::startPoint
+        345:::startPoint
+        click 88 href "88.html" "88"
+        click 345 href "345.html" "345 T-Junction"
+    
+        88[[88 Capsule]]
+        345[[345 T-Junction]]
+    </pre>
+</body>
+
+</html>

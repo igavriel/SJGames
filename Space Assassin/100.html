@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 100<A name="100" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        78[[78 Planet]]
+        100[[100]]
+        201[[201]]
+        309[[309 Planet Exit]]
+
+        100 --> 138 & 267
+        138(138 Blade) --> 195
+        195 --> 231 & 267
+        231(231 Suit) --> 267
+        267(267: 8 Prtabots) --> 303
+        303 --> 249 & 213
+    
+        213 --> 10 & 23 & 156
+        249 --> 285
+        285(285 Armory) --> 321 & 357
+        321 --> 6
+        357 --> 6
+        6 --> 213
+    
+        156 --> 166
+        23 --> 166
+        166 --> 78
+        10 --> 200 & 48
+        
+        48(48 Chopper) --> 124
+        124(124 Items) --> 162
+        162 --> 29 & 67 & 105 & 143
+        29(29 Plastic Cylinder) --> 181
+        67(67 Book in case) --> 181
+        105(105 Cardboard Packet) --> 181
+        143(143 Ink bottle) --> 181
+        181 --> 162 & 200
+    
+        200 --> 308 & 236
+        236 --> 308
+        308(308 Bug) --> 344
+        344 --> 218 & 254
+        218 --> 254
+        254 --> 201
+        
+        78 --Planet--> 309
+
+        78:::startPoint
+        100:::startPoint
+        201:::startPoint
+        309:::startPoint
+        click 78 href "78-102-Planet.html" "78 Planet"
+        click 100 href "100.html" "100"
+        click 201 href "61.html" "201"
+        click 309 href "309.html" "309 Exit Planet"
+    
+        style 78 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        style 100 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        style 201 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+        style 309 fill:#02FFFF,stroke:#0000FF,stroke-width:2px
+    </pre>
+</body>
+
+</html>

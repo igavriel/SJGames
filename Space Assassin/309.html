@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 309 - Exit Planet<A name="309" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        88[[88 Capsule]]
+        102[[102 Planet]]
+        309[[309 Planet Exit]]
+        345[[345 T-Junction]]
+        
+        309 --> 345 & 50
+        50 --> 345 & 88
+        
+        102 --Planet--> 309
+
+        88:::startPoint
+        102:::startPoint
+        309:::startPoint
+        345:::startPoint
+
+        click 88 href "88.html" "88 Capsule"
+        click 102 href "78-102-Planet.html" "102 Planet"
+        click 309 href "309.html" "309 Exit Planet"
+        click 345 href "345.html" "345 T-Junction"
+    </pre>
+</body>
+
+</html>

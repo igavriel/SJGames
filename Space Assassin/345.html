@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 345<A name="345" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        345[[345 T-Junction]]
+        373[[373 Alien]]
+    
+        345 --> 70 & 219
+        219 --> 70 & 395
+        
+        subgraph Bio Lab
+            395(395 Bio Lab) --> 291 & 327
+            291 --> 363 & 12
+            363(363 Tip) --> 327
+            12 --> 327
+        end
+
+        327 --> 70
+
+        subgraph Village
+            70(70 Village) --> 108 & 146 & 184
+            108(108 Two Guards) --> 203
+            146 --> 108 & 239 
+            184 --> 275 & 311 & 347 & 396 & 108 & 146
+            275(275 Gas Can) --> 108 & 203
+            311(311 Cards) --> 146
+            end
+        347(347 Container) --> 109 & 257
+
+        396(396 Device) --> 203
+
+        203 --> 109 & 257
+        257(257 Kitchen) --> 293 & 109
+        293(293 Rest) --> 109
+        239 --> 203
+
+        subgraph Pool
+            109(109 Pool) --> 147 & 185
+            185 --> 204 & 240
+            204 --> 276 & 312
+            276(276 Granade) --> 294 & 330
+            294 --> 312
+            330 --> 312
+            312(312 Octopus) --> 366
+        end
+
+        366 -->373
+        147 --> 373
+        
+        345:::startPoint
+        373:::startPoint
+        
+        click 345 href "345.html" "345 T-Junction"
+        click 373 href "373.html" "373 Alien"
+    </pre>
+</body>
+
+</html>

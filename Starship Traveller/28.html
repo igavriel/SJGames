@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 28 - Green Planet<A name="28" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        28[[28 Green Planet]]
+        34[[34 Medium Blue Green Planet]]
+        87[[87 Fail]]
+        243[[243 Fail]]
+        328[[328 Fail]]
+
+        28 --> 184 & 156
+        184(184 Lost Officer) --> 71
+        71 --> 156
+        156(156 Fight) --> 328 & 3 & 100
+        100 --> 236 & 173
+        3 --> 236 & 173
+        173 --> 200 & 22
+
+        22(22 Fight) --> 311
+        200 --> 243 & 279
+        279 --> 311
+
+        236(236 Plant) --> 45 & 87
+        45 --> 311 & 173
+
+        311 --> 34
+
+        28:::startPoint
+        34:::startPoint
+        87:::endPoint
+        243:::endPoint
+        328:::endPoint
+        22:::fight
+        184:::fight
+
+        click 28 href "28.html" "28 Green Planet"
+        click 34 href "34.html" "34 Medium Blue Green Planet"
+    </pre>
+</body>
+
+</html>

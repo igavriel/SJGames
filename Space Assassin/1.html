@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 1 - Start<A name="1" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        1 --> 20 & 58 & 39 & 77
+        39 --> 141 & 234
+        141(141 Device) --> 58 & 77
+        234 --> 58 & 77
+        58 --> 278 & 93
+        93 --> 77
+        278 --> 77
+        77 --> 134 & 103
+        103 --> 134 & 228 & 192
+        192 --> 228
+        
+        subgraph Prison
+            20(20 Robot) --> 300
+            300(300 Prison) --> 318 & 63
+            228(228 Robot) --> 264
+            264(264 Prison) --> 318 & 63
+            318(318 Monster) --> 63
+            63(63 Tip) --> 318
+        end
+
+        63 & 318 & 300 --> 134
+
+        1:::startPoint
+        134:::startPoint
+        63:::tip
+
+        click 134 href "134.html" "134"
+    
+        1[[1]]
+        134[[134]]
+    </pre>
+</body>
+
+</html>

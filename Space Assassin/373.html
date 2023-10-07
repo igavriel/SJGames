@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 373<A name="373" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        373[[373 Alien]]
+        381[[381 Simulator Start]]
+        190[[190 Simulator Exit]]
+        382[[382 AI]]
+        72[[72 Fail]]
+        86[[86 Fail]]
+        90[[90 Fail]]
+        129[[129 Fail]]
+        384[[384 Fail]]
+        378[[378 Fail]]
+    
+        373 --> 15 & 295 & 383
+        15(15 Question)
+        383(383 Fight) --> 392
+        392 --> 97
+        295 --> 326 & 377 & 367 & 390
+        377(377 Device) --> 97
+        367(367 Cardboard Packet) --> 149 & 259
+        326(326 Alien Book) --> 15 & 383
+        390(390 Squirrel) --> 111 & 92
+        92 --> 15 & 383
+        111 --> 97
+        149 --> 97
+        259 --> 383
+        97 --> 51 & 381 & 34
+        51(51 Bomb) --> 14
+        14(14 Black balls) --> 382 & 90 & 381 & 34
+        34 --> 378 & 44
+        44 --> 86 & 360
+        360 --> 72 & 129
+
+        381 --Simulator--> 190
+        190 --> 52 & 165
+        52(52 Gravity Bomb) --> 332
+        332(332 Riddle Floor)
+        165(165 Toroid) --> 384 & 332
+
+        15:::startPoint
+        332:::startPoint
+        190:::startPoint
+        373:::startPoint
+        381:::startPoint
+        382:::startPoint
+        
+        72:::endPoint
+        86:::endPoint
+        90:::endPoint
+        129:::endPoint
+        378:::endPoint
+        384:::endPoint
+    
+        click 373 href "373.html" "373 Alien"
+        click 381 href "381-Simulator.html" "381 Simulator"
+        click 382 href "382.html" "382 AI"
+    </pre>
+</body>
+
+</html>

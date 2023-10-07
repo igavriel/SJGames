@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 261 - Little Grey Planet<A name="261" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        2[[2 Blue Planet]]
+        92[[92 Ganzig Ship]]
+        261[[261 Little Grey Planet]]
+        329[[329 Large Red Planet]]
+
+        261 --> 176 & 66
+        176 --> 66
+
+        66 --> 306 & 18 & 201
+        201(201 Luck) --> 172
+        306(306 Luck) --> 172
+        172(172 Luck) --> 153 & 255
+        255(255 Luck) --> 18
+
+        153 --> 18
+        18 --> 337
+
+        337 --> 223 & 284
+        223(223 Luck) --> 129 & 46
+        129(129 Lost Officer) --> 284
+        284 --> 11
+        46 --> 11
+
+        11 --> 329 & 2 & 92
+        
+        2:::startPoint
+        92:::startPoint
+        261:::startPoint
+        329:::startPoint
+        129:::fight
+        172:::luck
+        201:::luck
+        223:::luck
+        255:::luck
+        306:::luck
+        
+        click 2 href "2.html" "2 Blue Planet"
+        click 92 href "92.html" "92 Ganzig Ship"
+        click 261 href "261.html" "261 Little Grey Planet"
+        click 324 href "324.html" "324 End Scene"
+        click 329 href "329.html" "329 Large Red Planet"
+    </pre>
+</body>
+
+</html>

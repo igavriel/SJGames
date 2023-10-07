@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+
+<body>
+    <h1>Section 172<A name="172" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        100[[100]]
+        172[[172]]
+        116[[116 Fail]]
+        154[[154 Fail]]
+
+        172 --> 175 & 59 & 191
+        175 --> 194 & 266
+        59 --> 175 & 135
+        135 --> 175
+        191 --> 59 & 175 & 342
+        342 --> 263 & 299 & 335
+        299 --> 209
+        263 --> 209
+        209 --> 245 & 335
+        335 --> 59 & 175
+        
+        subgraph Bomb
+            245(245: 6 Min) --> 21 & 281
+            21(21: 5 Min) --> 353
+            281(281: 5 Min) --> 317 & 353
+            353(353: 3 Min) --> 40
+            317(317: 4-3 Min)--> 2
+            2(2: 1 Min) --> 120
+            120 --> 154
+            40 --> 154 & 116
+        end
+    
+        194 --> 266 & 356
+        266(266 Man) --> 302 & 320 & 284
+        302 --> 212 & 338
+        338(338 Technician) --> 248
+        212 --> 248
+        248 --> 356
+        320 --> 356
+        284 --> 356
+        356 --> 5 & 100
+    
+        subgraph 6 Robots
+            5(5: 6 Robots) --> 43 & 157 & 24
+            24 --> 62
+            43(43 Fight) --> 81 & 119
+            81(81 Granade) --> 62
+            119 --> 62
+            157(157 Talk) --> 62
+        end
+        
+        62 --> 100
+
+        100:::startPoint
+        172:::startPoint
+        116:::endPoint
+        154:::endPoint
+
+        click 100 href "100.html" "100"
+        click 172 href "172.html" "172"
+    </pre>
+</body>
+
+</html>

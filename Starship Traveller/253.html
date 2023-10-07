@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 253 - Large Grey Planet<A name="253" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        97[[97 Black Planet]]
+        104[[104 Greeny Grey Planet]]
+        137[[137 Space Station]]
+        253[[253 Large Grey Planet]]
+
+        253 --> 52 & 109
+        52 --> 193 & 109
+        193 --> 257
+        257(257 Luck) --> 109
+        109 --> 320 & 32 & 57
+
+        32 --> 111 & 122
+        111 --> 187
+
+        122(122 Fight) --> 37 & 225
+        225 --> 57
+        
+        37 --> 187
+        187 --> 78 & 326
+        78 --> 64 & 94
+        326(326 Luck) --> 12 & 266
+        12 --> 78
+        266 --> 134
+        134 --> 310 & 320
+        310 --> 239
+
+        94 --> 43 & 239
+        64 --> 239 & 43
+
+        43(43 Fight) --> 239 & 301
+        301 --> 320
+
+        239(239 Fight) --> 183
+        183(183 Fight) --> 72
+        72 --> 280
+        280(280 Tip Black hole sector 083) --> 320
+
+        57 --> 287
+        287 --> 195 & 29
+        195 --> 187
+        29(29 Fight) --> 187
+
+        320 --> 137 & 331
+        331 --> 97 & 104
+
+        97:::startPoint
+        104:::startPoint
+        137:::startPoint
+        253:::startPoint
+        280:::tip
+        29:::fight
+        43:::fight
+        122:::fight
+        183:::fight
+        239:::fight
+        257:::luck
+        326:::luck
+        
+        click 97 href "97.html" "97 Black Planet"
+        click 104 href "104.html" "104 Greeny Grey Planet"
+        click 137 href "137.html" "137 Space Station"
+        click 253 href "253.html" "253 Large Grey Planet"
+    </pre>
+</body>
+
+</html>
