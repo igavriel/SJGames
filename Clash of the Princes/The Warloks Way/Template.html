@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 2 - Blue Planet<A name="2" /></h1>
+    <pre class='mermaid'>
+    graph TD
+    
+        1[[1 Fail]]
+        2[[2 Html Link]]
+        22[[22 Self Link]]
+        3[[3 Fight]]
+        4[[4 Luck]]
+        5[[5 Tip]]
+        
+        2:::startPoint
+        22:::startPoint
+
+        1:::endPoint
+        3:::fight
+        4:::luck
+        5:::tip
+
+        click 2 href "2.html" "2 Tool tip"
+        click 22 href "#2" "22 Tool tip"
+    </pre>
+</body>
+
+</html>

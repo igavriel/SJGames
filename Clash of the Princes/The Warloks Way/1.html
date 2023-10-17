@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 1 - Start<A name="1" /></h1>
+    <pre class='mermaid'>
+    graph TD
+    
+        1[[1 Start]]
+
+        1 --> 148
+        148(148 Action 22, State 1,2,3) --> 325
+        325 --> 391 & 363
+        391 --> 467 & 436
+        467(467 Luck) --> 226
+        436 --> 363
+        363(363 Monsters) --> 122 & 254
+        122 --> 42 & 181
+        254 --> 42 & 181
+        226(226 Action 26, State 1,4,5) --> 165
+
+
+
+
+
+        1:::startPoint
+        148:::action
+        226:::action
+        363:::fight
+        467:::luck
+
+        click 1 href "#1" "1 Start"
+
+
+
+        2[[2 Html Link]]
+        5[[5 Tip]]
+        2:::endPoint
+        5:::tip
+        click 2 href "2.html" "2 Tool tip"
+
+
+    </pre>
+</body>
+
+</html>
