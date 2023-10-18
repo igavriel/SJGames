@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 60 - Toll Bridge<A name="60" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        60[[60 Toll Bridge]]
+
+        39[[39 Action 1]]
+
+        60:::startPoint
+        39:::endPoint
+
+        click 60 href "#60" "60 Toll Bridge"
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 165 - Oak<A name="165" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        39[[39 Action 1]]
+        165[[165 Oak]]
+        209[[209 Lake]]
+
+        165 --> 293
+
+        293(293 Lake) --> 151 & 13
+        151 --> 39
+        13 --> 245 & 386 & 151
+        
+        386(386 Spell) --> 400 & 423 & 440 & 472 & 310
+        400 --> 39
+        423 --> 209
+        440 --> 209
+        472 --> 245
+        472 --> 386
+        310 --> 151 & 245
+        109(109 Pay) --> 209
+        245(245 Pay) --> 109 & 192 & 151
+        
+        192(192 Fight) --> 39
+
+        165:::startPoint
+        209:::startPoint
+        39:::endPoint
+        192:::fight
+
+        click 165 href "#165" "165 Oak"
+        click 209 href "209.html" "209 Lake"
+    </pre>
+</body>
+
+</html>

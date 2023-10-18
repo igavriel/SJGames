@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 181 - Oak Tree<A name="181" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        181[[181 Oak Tree]]
+        39[[39 Action 1]]
+        60[[60 Toll Bridge]]
+
+        181 --> 92 & 259
+        259 --> 476 & 154
+        154 --> 476
+        476 --> 195 & 222 & 330 & 39
+        195 --> 39
+        222 --> 5
+        330 --> 5 & 126
+        126 --> 39
+
+        476(476 Luck)
+        92(92 Spell) --> 320 & 206 & 24 & 461
+        320 --> 476
+        206 --> 39
+        24 --> 39
+        461 --> 39
+        5(5 Fight) --> 116
+        116 --> 60
+
+        60:::startPoint
+        181:::startPoint
+        39:::endPoint
+        5:::fight
+        476:::luck
+
+        click 181 href "#181" "181 Oak Tree"
+        click 60 href "60.html" "60 Tool Bridge"
+        click 165 href "165.html" "165 Oak"
+    </pre>
+</body>
+
+</html>

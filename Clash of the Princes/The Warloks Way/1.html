@@ -21,8 +21,9 @@
     <h1>Section 1 - Start<A name="1" /></h1>
     <pre class='mermaid'>
     graph TD
-    
         1[[1 Start]]
+        165[[165 Oak]]
+        181[[181 Oak Tree]]
 
         1 --> 148
         148(148 Action 22, State 1,2,3) --> 325
@@ -34,28 +35,20 @@
         122 --> 42 & 181
         254 --> 42 & 181
         226(226 Action 26, State 1,4,5) --> 165
-
-
-
-
+        42(42 Action 25 State 1,4,5) --> 165
 
         1:::startPoint
+        165:::startPoint
+        181:::startPoint
+        42:::action
         148:::action
         226:::action
         363:::fight
         467:::luck
 
         click 1 href "#1" "1 Start"
-
-
-
-        2[[2 Html Link]]
-        5[[5 Tip]]
-        2:::endPoint
-        5:::tip
-        click 2 href "2.html" "2 Tool tip"
-
-
+        click 165 href "165.html" "165 Oak"
+        click 181 href "181.html" "181 Oak Tree"
     </pre>
 </body>
 
