@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 463 - Villa<A name="463" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        96[[96]]
+        289[[289]]
+        463[[463 Villa]]
+        39[[39 Action 1]]
+        453(453
+            Action 30)
+
+        463 --> 243 & 378
+
+        378(378 Garden) --> 288 & 335
+        335(335 Bat) --> 288
+
+        243 --> 175 & 110
+
+        110 --> 16 & 40 & 68
+        175 --> 16 & 40 & 68
+        16(16 Cube 1 or 2) --> 288
+        40(40 Cube 3 or 4) --> 288
+        68(68 Cube 5 or 6) --> 39
+
+        288 --> 409 & 474
+        409(409 Gin) --> 362
+        362(362 Ring-8) --> 453
+
+        474(474 Carpet) --> 95 & 121 & 135
+
+        121(121 Big Door) --> 156 & 184
+        95(95 Window) --> 156 & 208
+        135(135 Small Door) --> 184 & 208
+        208(208 Door) --> 260 & 280
+        184(184 Corridor) --> 260 & 280 & 229
+        156(156 Window) --> 229 & 280
+        260(260 Door) --> 312 & 339
+        229(229 Window) --> 39
+        280(280 Hole) --> 359 & 339
+        312(312 Corridor) --> 95 & 392 & 121
+        339(339 Corridor) --> 95 & 121 & 135
+        359(359 Arch Door) --> 121 & 135
+        392(392 Window - Ring-8) --> 453
+
+        453 == 1 ==> 96
+        453 == 9,10 ==> 289
+
+        96:::startPoint
+        289:::startPoint
+        463:::startPoint
+        39:::endPoint
+        409:::fight
+        453:::action
+        362:::tip
+        392:::tip
+        16:::luck
+        40:::luck
+        68:::luck
+
+        click 463 href "#463" "463 Villa"
+        click 96 href "96.html" "96"
+        click 289 href "289.html" "289"
+    </pre>
+</body>
+
+</html>

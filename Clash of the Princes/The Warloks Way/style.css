@@ -69,3 +69,27 @@ table.Tables thead {
     color: #000000 !important;
     stroke-width: 2px !important;
 }
+
+.red>rect,
+.red>polygon {
+    fill: #ff4a2f !important;
+    stroke: #d41313 !important;
+    color: #534a4a !important;
+    stroke-width: 2px !important;
+}
+
+.yellow>rect,
+.yellow>polygon {
+    fill: #eff30c !important;
+    stroke: #85920f !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.blue>rect,
+.blue>polygon {
+    fill: #01a2ff !important;
+    stroke: #0000fF !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}

@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections: 432 - Music<A name="432" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        39[[39 Action 1]]
+        340[[340 Forest]]
+        367[[367]]
+        432[[432 Music]]
+
+        432 --> 377 & 340
+        377(377 Fairies) --> 302 & 340
+        302 --> 233 & 274
+        233 --> 340
+        274 --> 45 & 340
+        45 --> 134 & 113
+        134(134 Cave) --> 290 & 337
+        290 --> 414 & 447
+        414 --> 39
+        447 --> 337
+        337(337 Fight) --> 89
+        89 --> 7
+
+        113 --> 197 & 177
+        177 --> 262 & 238
+        197(197 Fight) --> 489
+        238(238 Fight) --> 489
+        262 --> 489
+        489 --> 7
+        
+        7 --> 367 & 340
+
+        340:::startPoint
+        367:::startPoint
+        432:::startPoint
+        197:::fight
+        238:::fight
+        337:::fight
+        39:::endPoint
+
+        click 432 href "#432" "432 Music"
+        click 340 href "340.html" "340 Forest"
+        click 367 href "367.html" "367"
+    </pre>
+</body>
+
+</html>

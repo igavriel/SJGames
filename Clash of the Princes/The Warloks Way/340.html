@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 340 - Forest<A name="340" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        2[[2 Storm]]
+        27[[27]]
+        340[[340 Forest]]
+        39[[39 Action 1]]
+        367(367
+            Action 27)
+        
+        340 --> 296 & 251
+        296 --> 39
+        251 --> 157 & 101
+        101 --> 39
+        157 --> 215 & 328
+        215(215 Sun) --> 101
+        328(328 Moon) --> 430 & 452
+        452 --> 101
+        430 --> 52
+        430 --> 75
+        75 --> 101
+        52 --> 119 & 188 & 228 & 279
+        119(119 Rock) --> 499
+        188(188 Silver) -->  499
+        228(228 Crystal) --> 499
+        279(279 Gold) --> 499
+        499(499 Pub) --> 367
+
+        367 == 1 ==> 2
+        367 == 7 ==> 27
+
+        2:::startPoint
+        27:::startPoint
+        340:::startPoint
+        39:::endPoint
+        367:::action
+        215:::tip
+        328:::tip
+
+        click 340 href "#340" "340 Forest"
+        click 2 href "2.html" "2 Storm"
+        click 27 href "27.html" "27"
+    </pre>
+</body>
+
+</html>
