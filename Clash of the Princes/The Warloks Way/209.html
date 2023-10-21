@@ -18,20 +18,31 @@
 </script>
 
 <body>
-    <h1>Section 209 - Lake<A name="209" /></h1>
+    <h1>Section 209 - Lake / 497 - River<A name="209" /></h1>
     <pre class='mermaid'>
     graph TD
+        78[[78 Bridge]]
         209[[209 Lake]]
+        497[[497 River]]
         39[[39 Action 1]]
 
-        209 --> 432 & 340
+        78 -- Left --> 432
+        78 -- Right-->  340
+        209 -- Left --> 432
+        209 -- Right-->  340
+        497 -- Left --> 432
+        497 -- Right-->  340
         432(432 Left)
         340(340 Right)
 
+        78:::startPoint
         209:::startPoint
+        497:::startPoint
         39:::endPoint
 
+        click 78 href "#78" "78 Bridge"
         click 209 href "#209" "209 Lake"
+        click 497 href "#497" "497 River"
     </pre>
 </body>
 

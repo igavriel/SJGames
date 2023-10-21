@@ -19,14 +19,53 @@
 
 <body>
     <h1>Section 1 - Start<A name="1" /></h1>
+    <h2>Lothar the Warlock-Prince</h2>
+    <h2>Clovis the Warrior-Prince</h2>
     <pre class='mermaid'>
     graph TD
         1[[1 Start]]
-        165[[165 Oak]]
         181[[181 Oak Tree]]
+        293[[293 Lake]]
+        42(42
+            Action 25)
+        148(148 
+            Action 22) 
+        199(199
+            Action 23)
+        226(226
+            Action 26)
+        78[[78 Bridge - Solo
+            Same as 209]]
+        497[[497 River - Solo
+            Same as 209]]
 
-        1 --> 148
-        148(148 Action 22, State 1,2,3) --> 325
+        1 == Duel ==> 199
+        199 == 3 ==> 287
+        199 == 1,2 ==> 242 
+        242 --> 325
+        287 --> 486 & 455 & 403
+        403(403 Orcs - Windows) == From Clovis ==> 85
+        455(455 Orcs - Solo) --> 85
+        85 --> 9
+        486(486 Orcs - Duel) --> 35 & 9
+        9 --> 306 & 186
+        306 --> 397 & 480
+        397(397 Spell) --> 270 & 169 & 66 & 480
+        66 --> 202
+        480(480 Moth) --> 202 & 497
+        270 --> 497 & 202
+        169 --> 360 & 444
+        360(360 Luck) --> 202
+        202 --> 38 & 106
+        38 --> 497 & 106
+        106(106 Cobwebs) --> 293
+        186(186 Gremlins) --> 230 & 78
+        230 --> 306 & 350
+        350 --> 293
+
+        1 == Solo ==> 148
+        148 == 1,2,3 ==> 325
+
         325 --> 391 & 363
         391 --> 467 & 436
         467(467 Luck) --> 226
@@ -34,21 +73,35 @@
         363(363 Monsters) --> 122 & 254
         122 --> 42 & 181
         254 --> 42 & 181
-        226(226 Action 26, State 1,4,5) --> 165
-        42(42 Action 25 State 1,4,5) --> 165
+        226 == 1,4,5 ==> 165
+        42 == 1,4,5 ==> 165
+        165 --> 293
 
         1:::startPoint
-        165:::startPoint
+        78:::startPoint
         181:::startPoint
+        293:::startPoint
+        497:::startPoint
         42:::action
         148:::action
+        199:::action
         226:::action
+        186:::fight
         363:::fight
+        403:::fight
+        455:::fight
+        480:::fight
+        486:::fight
+        360:::luck
         467:::luck
+        35:::endPoint
+        444:::endPoint
 
         click 1 href "#1" "1 Start"
-        click 165 href "165.html" "165 Oak"
         click 181 href "181.html" "181 Oak Tree"
+        click 293 href "293.html" "293"
+        click 78 href "209.html" "78 Bridge"
+        click 497 href "209.html" "497 River"
     </pre>
 </body>
 
