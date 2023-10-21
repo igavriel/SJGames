@@ -21,10 +21,13 @@
     <h1>Sections: 432 - Music<A name="432" /></h1>
     <pre class='mermaid'>
     graph TD
+        2[[2 Storm]]
+        27[[27]]
         39[[39 Action 1]]
         340[[340 Forest]]
-        367[[367]]
         432[[432 Music]]
+        367(367
+            Action 27)
 
         432 --> 377 & 340
         377(377 Fairies) --> 302 & 340
@@ -48,17 +51,23 @@
         
         7 --> 367 & 340
 
+        367 == 1 ==> 2
+        367 == 7 ==> 27
+
+        2:::startPoint
+        27:::startPoint
         340:::startPoint
-        367:::startPoint
         432:::startPoint
+        39:::endPoint
+        367:::action
         197:::fight
         238:::fight
         337:::fight
-        39:::endPoint
 
         click 432 href "#432" "432 Music"
         click 340 href "340.html" "340 Forest"
-        click 367 href "367.html" "367"
+        click 2 href "2.html" "2 Storm"
+        click 27 href "27.html" "27"
     </pre>
 </body>
 

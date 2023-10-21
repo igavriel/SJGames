@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 155 - Kobolds<A name="155" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        155[[155 Kobolds]]
+        39[[39 Action 1]]
+        31(31
+            Action 39)
+        111(111
+            Action 38)
+        494(494
+            Action 37)
+
+        155 --> 141 & 46 & 211
+        141(141 Gift) --> 256 & 299 & 324 & 211 & 46
+        256(256 Statue) --> 46 & 211
+        299(299 Snake) --> 93
+        324(324 Bottle) --> 46 & 211
+        211(211 Spell) --> 341 & 375 & 412 & 46 & 141
+        341 --> 46 & 141
+        375 --> 93
+        412 --> 93 & 460
+        460 --> 46 & 141
+        93(93 Ruby) --> 494 & 111
+        46(46 Fight) --> 39
+
+        111 == 1 ==> 218
+        111 == 18 ==> 235
+
+        235 --> 334 & 313
+        334 --> 313
+        313(313 Clovis) --> 160 & 55 & 99
+        55 --> 99
+
+        218 --> 160 & 99
+        99(99 Lava Worm) --> 282
+        282(282 Stone) --> 449 & 398
+        160(160 Luck) --> 355 & 427
+        427 --> 39
+        355 --> 398 & 449
+        449 --> 398
+
+        494 == 1, 17 ,18 ==> 22
+        22 --> 398
+
+        398 --> 194 & 64
+        194 --> 385 & 264 & 445 & 64
+        264(264 Gold) --> 404
+        445(445 White Fruit) --> 404
+        385(385 Shell) --> 477 & 31
+
+        64 --> 275 & 361 & 435 & 404
+        275 --> 404
+        361 --> 404
+        404 --> 39
+        435 --> 477 & 31
+
+        477 --> 62 & 393
+        63 --> 393
+
+        393 --> 80 & 168
+        168 --> 308 & 352 & 468 & 80
+        308(308 TODO-ILAN)
+        352
+        468
+        80(80 Demon)
+
+        31 == 1 ==> 44
+        31 == other ==> 421
+
+
+        155:::startPoint
+        39:::endPoint
+        160:::luck
+        31:::action
+        111:::action
+        494:::action
+        46:::fight
+        80:::fight
+        99:::fight
+        93:::tip
+        282:::tip
+
+        click 155 href "#155" "155 Kobolds"
+    </pre>
+</body>
+
+</html>
