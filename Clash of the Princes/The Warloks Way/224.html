@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 224 - One Eyed Man<A name="224" /></h1>
+    <pre class='mermaid'>
+    graph TD
+    
+        224[[224 One Eyed Man]]
+        107[[107 3 Old women]]
+        179[[179 Death]]
+        63[[63 Hills - Solo
+            Same as 2]]
+        318[[318 Hills - Solo
+            Same as 2]]
+        446[[446 Hills - Solo
+            Same as 2]]
+
+        224 --> 458 & 304
+
+        458 --> 383 & 318
+        304 --> 383 & 318
+
+        383 --> 214 & 420
+
+        214 --> 236 & 357
+        357(357 Graves) --> 11 & 63
+        
+        236 --> 179 & 357
+
+        11 --> 179 & 236
+
+        420 --> 83 & 47
+        83 --> 159 & 198 & 130 & 47
+
+        130 -- Clovis Goto 130 --> 47
+        159 -- Clovis Goto 159 --> 107 & 446
+        198 -- Clovis Goto 198 --> 107 & 446
+
+        47 --> C(Wait for Clovis)
+
+        224:::startPoint
+        107:::startPoint
+        63:::startPoint
+        179:::startPoint
+        318:::startPoint
+        446:::startPoint
+        357:::fight
+        C:::red
+
+        click 224 href "#224" "224 One Eyed Man"
+        click 63 href "2.html" "63 Hills"
+        click 318 href "2.html" "318 Hills"
+        click 446 href "2.html" "446 Hills"
+        click 107 href "107.html" "107 3 Old women"
+        click 179 href "179.html" "179 Death"
+    </pre>
+</body>
+
+</html>

@@ -93,3 +93,11 @@ table.Tables thead {
     color: #000000 !important;
     stroke-width: 2px !important;
 }
+
+.purple>rect,
+.purple>polygon {
+    fill: #a750ee !important;
+    stroke: #9900ff !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}

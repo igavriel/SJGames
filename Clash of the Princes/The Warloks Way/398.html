@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 398 - Corridor<A name="398" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        398[[398 Corridor]]
+        435[[435 Hall]]
+        385[[385 Shell
+            Same as 435]]
+        39[[39 Action 1]]
+
+        398 --> 194 & 64
+        194 --> 385 & 264 & 445 & 64
+        264(264 Gold) --> 404
+        445(445 White Fruit) --> 404
+        
+        64 --> 275 & 361 & 435 & 404
+        275 --> 404
+        361 --> 404
+        404 --> 39
+
+        398:::startPoint
+        385:::startPoint
+        435:::startPoint
+        39:::endPoint
+
+        click 398 href "#398" "398 Corridor"
+        click 435 href "435.html" "435 Hall"
+        click 385 href "435.html" "385 Shell"
+    </pre>
+</body>
+
+</html>

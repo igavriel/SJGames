@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 353 - Two faces Giant<A name="353" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        353[[353 Two faces Giant]]
+        39[[39 Action 1]]
+
+        353:::startPoint
+        39:::endPoint
+
+        click 353 href "#353" "353 Two faces Giant"
+    </pre>
+</body>
+
+</html>

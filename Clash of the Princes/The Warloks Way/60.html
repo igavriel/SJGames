@@ -23,41 +23,68 @@
     graph TD
         60[[60 Toll Bridge
             Action 24]]
-
-        39[[39 Action 1]]
-        155[[155 Kobolds]]
+        105[[105 Hydra]]
+        224[[224 One Eyed Man]]
+        340[[340 Forest]]
+        353[[353 Two faces Giant]]
+        432[[432 Music]]
+        204(204 Rainbow)
 
         60 == 1,5 ==> 105
         60 == 4 ==> 212
 
-        105(105 Hydra) --> 26 & 487
-        26 == 1 ==> 473
-        26 == 16 ==> 115
-        26 == other ==> 155
+        212(212 Troll) --> 371 & 345
+        371 --> 418
+        345(345 Troll) --> 48 & 411
+        48 --> 418 & 248 & 143
+        143 --> 418
+        248 --> 418
 
-        487(487 Hydra) --> 41 & 294
+        411 --> 139 & 72
+        139 --> 72
+        72 --> 432 & 340
 
-        294 == 16 ==> 51-C(Goto 51 Clovis book)
-        294 == other ==> 473-C(Goto 473 Clovis book)
-        294 --> 39
+        418 --> 322 & 353
 
-        41 == 1 ==> 473
-        41 == 16 ==> 246
-        41 == other ==> 155
+        322(322 Leprecon) --> 240 & 204 & 268 & 285
+        285 --> 353
+        268 --> 353
+        240 --> 204
 
+        204 --> 183(183 red)
+        204 --> 162(162 green)
+        204 --> 145(145 blue)
+        204 --> 124(124 purple)
+
+        183 --> 162
+        183 --> 145
+        183 --> 124
+
+        162 --> 353
+        145 --> 224
+        124 --> 81 & 50
+
+        50 -- Clovis Goto 50 -->  224
+        81 -- Clovis Goto 81 -->  224
 
         60:::startPoint
-        155:::startPoint
-        39:::endPoint
-        294:::endPoint
-        46:::fight
-        93:::tip
-        51-C:::red
-        473-C:::red
-        487:::fight
+        105:::startPoint
+        224:::startPoint
+        340:::startPoint
+        353:::startPoint
+        432:::startPoint
+        345:::fight
+        183:::red
+        162:::tip
+        145:::blue
+        124:::purple
 
         click 60 href "#60" "60 Toll Bridge"
-        click 155 href "155.html" "155 Kobolds"
+        click 105 href "105.html" "105 Hydra"
+        click 224 href "224.html" "224 One Eyed Man"
+        click 340 href "340.html" "340 Forest"
+        click 353 href "353.html" "353 Two faces Giant"
+        click 432 href "432.html" "432 Music"
     </pre>
 </body>
 
