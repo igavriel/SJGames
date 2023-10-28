@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 4 - Hobgoblin Cave<A name="4" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        4[[4 Hobgoblin Cave]]
+        223[[223 Birds]]
+        227[[227 Pirate]]
+        465(465
+            Action 32)
+
+        4 --> 82 & 278
+
+        82 --> 278
+        278 --> 413 & 176
+        176 --> 278 & 413 & 82
+
+        413 --> 53 & 396
+        53 --> 396 & 203 & 278
+
+        203 --> 413 & 396
+
+        396 --> 459
+        459(459 Two Hobgoblins) --> 172
+
+        172 --> 223 & 465
+
+        465 == 1,11,12,13,14 ==> 227
+
+        4:::startPoint
+        223:::startPoint
+        227:::startPoint
+        459:::fight
+        465:::action
+
+        click 4 href "#4" "4 Hobgoblin Cave"
+        click 223 href "223.html" "223 Birds"
+        click 227 href "227.html" "227 Pirate"
+    </pre>
+</body>
+
+</html>

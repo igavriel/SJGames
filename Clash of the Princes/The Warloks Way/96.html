@@ -18,16 +18,29 @@
 </script>
 
 <body>
-    <h1>Section 96<A name="96" /></h1>
+    <h1>Section 96 - Inn<A name="96" /></h1>
     <pre class='mermaid'>
     graph TD
-        96[[96 TODO-ILAN]]
-        39[[39 Action 1]]
+        96[[96 Inn]]
+        4[[4 Hobgoblin Cave]]
 
+        96 --> 437 & 405
+
+        405 --> 342 & 271
+        271 --> 342 & 153
+        153 --> 342 & 307
+        307 --> 342 & 495
+        342 --> 437 & 495
+        437 --> 271 & 153
+
+        495(495 Hobgoblin) --> 4
+
+        4:::startPoint
         96:::startPoint
-        39:::endPoint
+        495:::fight
 
-        click 96 href "#96" "96"
+        click 96 href "#96" "96 Inn"
+        click 4 href "4.html" "4 Hobgoblin Cave"
     </pre>
 </body>
 

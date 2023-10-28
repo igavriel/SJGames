@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 223 - Birds<A name="223" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        223[[223 Birds]]
+        227[[227 Pirate]]
+        366[[366 Desert]]
+        39[[39 Action 1]]
+        C-282(Clovis Goto 282)
+        451(451
+            Action 31)
+
+        223 --> 419 & 441 & 479
+
+        419(419 Inventory) --> 253 & 297 & 349 & 441 & 479
+        253(253 Mechanical Bird) --> 479 & 441
+        297(297 Two Sticks) --> 479
+        349(349 Red Ruby) --> 273
+
+        479 --> 39
+
+        441(441 Spell) --> 14 & 67 & 216 & 479
+        14 --> 479
+        67 --> 273
+        216 --> 273
+
+        273 --> 358 & 382
+
+        358 --> 451 & 311
+        382 --> 451 & 311
+        311 --> 39
+
+        451 == 1,14 ==> 90
+        451 == 11 ==> 366
+        451 == 12 ==> 490
+        451 == 13 ==> 470
+
+        470(470 Witch hunter) --> 90
+        490(490 Witch hunter) --> 200
+        490(490 Witch hunter) --> C-282
+        200 -- Clovis Goto 366 --> 366
+
+        90 --> 227
+    
+        223:::startPoint
+        227:::startPoint
+        366:::startPoint
+        39:::endPoint
+        470:::fight
+        490:::fight
+        451:::action
+        C-282:::red
+
+        click 223 href "#223" "223 Birds"
+        click 227 href "227.html" "227 Pirate"
+        click 366 href "366.html" "366 Desert"
+    </pre>
+</body>
+
+</html>

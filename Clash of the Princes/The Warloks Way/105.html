@@ -23,41 +23,44 @@
     graph TD
         105[[105 Hydra]]
         39[[39 Action 1]]
+        294[[294]]
         473[[473 Kobolds Room]]
-        51-C(Goto 51 Clovis book)
-        190-C(Goto 190 Clovis book)
-        473-C(Goto 473 Clovis book)
+        C-51(Clovis Goto 51)
+        C-190(Clovis Goto 190)
+        C-473(Clovis Goto 473)
         
         105 --> 26 & 487
-        26 == 1 ==> 473
         26 == 16 ==> 115
+        26 == 1 ==> 473
         26 == other ==> 155
 
-        115 --> 51-C
+        115 --> C-51
 
         487(487 Hydra) --> 41 & 294
 
-        246 --> 115 & 416
+        246 --> 115
+        246 --> 416
 
-        416 --> 190-C
+        416 --> C-190
 
-        294 == 16 ==> 51-C
-        294 == other ==> 473-C
+        294 == 16 ==> C-51
+        294 == other ==> C-473
         294 --> 39
 
+        41 == other ==> 155
         41 == 1 ==> 473
         41 == 16 ==> 246
-        41 == other ==> 155
 
-        155 -- You and Clovis Goto --> 473
+        155 -- You and 
+               Clovis --> 473
 
         105:::startPoint
         473:::startPoint
         39:::endPoint
         294:::endPoint
-        51-C:::red
-        190-C:::red
-        473-C:::red
+        C-51:::red
+        C-190:::red
+        C-473:::red
         487:::fight
 
         click 105 href "#105" "105 Hydra"
