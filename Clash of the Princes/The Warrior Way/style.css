@@ -1,0 +1,103 @@
+table.Tables {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 2pt;
+    border-color: #0400ff;
+    border-style: solid;
+    color: #000000;
+}
+
+table.Tables td,
+table.Tables th {
+    border-width: 2pt;
+    border-color: #0400ff;
+    border-style: solid;
+    padding: 5px;
+    text-align: center;
+    vertical-align: top;
+}
+
+table.Tables thead {
+    background-color: #ffffff;
+}
+
+.startPoint>rect,
+.startPoint>polygon {
+    fill: #77FFFF !important;
+    stroke: #5151f3 !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.endPoint>rect,
+.endPoint>polygon {
+    fill: #FF9966 !important;
+    stroke: #FF0000 !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.fight>rect,
+.fight>polygon {
+    fill: #FFAAAA !important;
+    stroke: #FF5555 !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.luck>rect,
+.luck>polygon {
+    fill: #f3f16a !important;
+    stroke: #f7836c !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.tip>rect,
+.tip>polygon {
+    fill: #a2ff77 !important;
+    stroke: #112c1f !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.action>rect,
+.action>polygon {
+    fill: #f5b7ea !important;
+    stroke: #112c1f !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.red>rect,
+.red>polygon {
+    fill: #ff4a2f !important;
+    stroke: #d41313 !important;
+    color: #534a4a !important;
+    stroke-width: 2px !important;
+}
+
+.yellow>rect,
+.yellow>polygon {
+    fill: #eff30c !important;
+    stroke: #85920f !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.blue>rect,
+.blue>polygon {
+    fill: #01a2ff !important;
+    stroke: #0000fF !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
+
+.purple>rect,
+.purple>polygon {
+    fill: #a750ee !important;
+    stroke: #9900ff !important;
+    color: #000000 !important;
+    stroke-width: 2px !important;
+}
