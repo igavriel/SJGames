@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 137 - Ocean<A name="137" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        137[[137 Ocean]]
+        39[[39 Action 1]]
+        344[[344]]
+
+        137 --> 456 & 8
+
+        456 --> 158 & 258
+        158 --> 410
+        258(258 Two Merman) --> 336
+        336 --> 410
+
+        410 --> 97 & 117 & 144
+        97 --> 39
+        144 --> 39
+        117 --> 232 & 327
+
+        327 --> 39
+        232(232 Shell) --> 344
+
+        8(8 Shark) --> 74
+
+        74 --> 390 & 456
+
+        390 --> 39
+
+        137:::startPoint
+        344:::startPoint
+        39:::endPoint
+        232:::tip
+        8:::fight
+        258:::fight
+
+        click 137 href "#137" "137"
+        click 344 href "344.html" "344"
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 136 - Bridge<A name="136" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        136[[136 Bridge]]
+        39[[39 Action 1]]
+        473[[473 Kobolds Room]]
+        C-51(Clovis Goto 51)
+        C-473(Clovis Goto 473)
+
+        136 --> 164 & 305 & 431
+
+        164 --> 34 & 207 & 331 & 305 & 431
+
+        431 --> 487 & 457
+        457(457 Luck) --> 105 & 407
+
+        105 --> 26 & 487
+
+        26 == 1 ==> 473
+        26 == other ==> 155
+        26 == 16 ==> 115
+
+        407 --> 487
+        34 --> 487
+        207 --> 487
+
+        487(487 Three Head Hydra) --> 41 & 294
+
+        305(305 Luck) --> 41 & 388
+        388 -->487
+
+        331(331 Luck) --> 76 & 364
+        364(364 Nine Head Hydra) --> 41 & 294
+
+        294 == 16 ==> C-51
+        294 == other ==> C-473
+        294 --> 39
+
+        76 --> 41
+
+        41 == 16 ==> 246
+        41 == 1 ==> 473
+        41 == other ==> 155
+
+        246 --> 416 & 115
+
+        155 -- Clovis Goto 473 --> 473
+        416 -- Clovis Goto 190 --> C(Wait for Clovis)
+        115 -- Clovis Goto 51 --> C(Wait for Clovis)
+
+        136:::startPoint
+        473:::startPoint
+        39:::endPoint
+        305:::luck
+        331:::luck
+        457:::luck
+        364:::fight
+        487:::fight
+        C-51:::red
+        C-473:::red
+        C:::red
+
+        click 136 href "#136" "136 Bridge"
+        click 473 href "473.html" "473 Kobolds Room"
+    </pre>
+</body>
+
+</html>

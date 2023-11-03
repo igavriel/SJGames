@@ -28,6 +28,7 @@
         185(185
             Action 40)
         C-44(Clovis Goto 44)
+        C-368(Clovis Goto 368)
 
         435 --> 477 & 31
         385 --> 477 & 31
@@ -54,18 +55,29 @@
 
         185 == From Clovis ==> 44
         
-        44 --> ?(? Number of hell holes)
+        44 --> ?(Number of hell holes) --> 18
         44 --> 380
         380 == 20 ==> C-44
 
+        18 --> 439 & 454 & 482
+        439(439 Red) == 20 ==> C-44
+        482(482 Yellow) == 20 ==> C-44
+        454(454 Green) == 20 ==> C-368
+        454 --> 500
+
         385:::startPoint
         435:::startPoint
+        500:::startPoint
         380:::endPoint
         31:::action
         185:::action
         80:::fight
         C-44:::red
+        C-368:::red
         ?:::blue
+        439:::red
+        454:::tip
+        482:::yellow
 
         click 435 href "#435" "435 Hall"
         click 385 href "#435" "385 Shell"

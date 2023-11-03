@@ -18,18 +18,81 @@
 </script>
 
 <body>
-    <h1>Section 210<A name="210" /></h1>
+    <h1>Section 210 - Slave<A name="210" /></h1>
     <pre class='mermaid'>
     graph TD
-        210[[210]]
+        210[[210 Slave]]
+        25[[25 Inn]]
+        96[[96 Inn]]
         39[[39 Action 1]]
+        217(217
+            Action 29)
+        329(329
+            Action 28)
+        453(453
+            Action 30)
 
-        TODO-ILAN:::red
+        210 --> 30 & 87 & 370
+
+        30 --> 450 & 426
+
+        87 --> 149 & 442
+
+        426(426 Spell) --> 450 & 59 & 239 & 127
+        59 --> 321
+        127 --> 321
+        239 --> 321
+        321 --> 453
+
+        450 --> 267 & 466
+        267 --> 453
+
+        442 --> 347
+        149 --> 329
+
+        217 == 1 , 10 ==> 37
+        217 == 9 ==> 493
+
+        37 --> 39
+
+        329 == 1 ==> 96
+        329 == 9 ==> 142
+        329 == 10 ==> 289
+
+        453 == 1 ==> 96
+        453 == 9, 10 ==> 289
+
+        493 --> 298 & 381
+        289 --> 25
+        142 --> C(Wait for Clovis)
+
+        370 --> 347
+        347 -- 6 --> 466
+        347 --> 402
+        466 --> 217
+
+        402(402 Rope) --> 453
+
+        381(381 Rope) --> 25
 
         210:::startPoint
+        25:::startPoint
+        96:::startPoint
         39:::endPoint
+        298:::endPoint
+        347:::fight
+        381:::tip
+        402:::tip
+        217:::action
+        329:::action
+        453:::action
+        C:::red
 
         click 210 href "#210" "210"
+        click 25 href "96.html" "25 Inn"
+        click 96 href "96.html" "96 Inn"
+        click 189 href "96.html" "189 Inn"
+        click 379 href "96.html" "379 Inn"
     </pre>
 </body>
 

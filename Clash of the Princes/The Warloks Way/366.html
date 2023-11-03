@@ -22,14 +22,30 @@
     <pre class='mermaid'>
     graph TD
         366[[366 Desert]]
-        39[[39 Action 1]]
+        227[[227 Pirate]]
+        C(Wait for Clovis)
 
-        TODO-ILAN:::red
+        366 --> 462 & 401
+
+        401 --> 462
+        401 -- Solo --> 10
+
+        462 --> 150 & 249 & 286
+
+        150 --> C
+        249 --> C
+        286(286 Lizard Man) --> 249
+        286 -- Solo --> 10
+
+        10 --> 227
 
         366:::startPoint
-        39:::endPoint
+        227:::startPoint
+        286:::fight
+        C:::red
 
         click 366 href "#366" "366 Desert"
+        click 227 href "227.html" "227 Pirate"
     </pre>
 </body>
 

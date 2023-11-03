@@ -22,20 +22,42 @@
     <pre class='mermaid'>
     graph TD
         227[[227 Pirate]]
+        137[[137 Ocean]]
+        65[[65 Pleaos]]
         39[[39 Action 1]]
 
         227 --> 20 & 443
+        20 --> 39
 
-        443 --> 356 & 281
-        356(356 Spell)
-        281(281 Inventory)
+        443 --> 281 & 356
+        281(281 Inventory) --> 356 & 108 & 166 & 191
+        356(356 Spell) --> 191 & 266 & 319 & 20
 
-        TODO-ILAN:::red
+        108(108 Flash Arrow) --> 39
+        166(166 Red Ruby) --> 20
+        191(191 Flying Carpet) --> 237
+
+        266 --> 39
+        319(319 Shark) --> 384
+        384 --> 237
+        237(237 Sailors) --> 28
+        
+        28 --> 65 & 369
+
+        369 --> 137 & 56
+
+        56 --> 39
 
         227:::startPoint
+        137:::startPoint
+        65:::startPoint
         39:::endPoint
+        237:::fight
+        319:::fight
 
         click 227 href "#227" "227 Pirate"
+        click 65 href "65.html" "65 Pleaos"
+        click 137 href "137.html" "137 Ocean"
     </pre>
 </body>
 

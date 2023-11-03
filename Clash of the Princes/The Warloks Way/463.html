@@ -22,7 +22,7 @@
     <pre class='mermaid'>
     graph TD
         96[[96 Inn]]
-        289[[289]]
+        25[[25 Inn]]
         463[[463 Villa]]
         39[[39 Action 1]]
         453(453
@@ -64,8 +64,10 @@
         453 == 1 ==> 96
         453 == 9,10 ==> 289
 
+        289 --> 25
+
         96:::startPoint
-        289:::startPoint
+        25:::startPoint
         463:::startPoint
         39:::endPoint
         409:::fight
@@ -78,7 +80,7 @@
 
         click 463 href "#463" "463 Villa"
         click 96 href "96.html" "96 Inn"
-        click 289 href "289.html" "289"
+        click 25 href "96.html" "25 Inn"
     </pre>
 </body>
 

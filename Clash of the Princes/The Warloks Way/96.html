@@ -18,13 +18,31 @@
 </script>
 
 <body>
-    <h1>Section 96 - Inn<A name="96" /></h1>
+    <h1>Section 25, 96, 189, 379 - Inn<A name="25" /></h1>
     <pre class='mermaid'>
     graph TD
+        25[[25 Inn]]
         96[[96 Inn]]
+        189[[189 Inn]]
+        379[[379 Inn]]
         4[[4 Hobgoblin Cave]]
+        C(Wait for Clovis)
+
+        25 --> 70 & 132
+
+        70(70 Four Bullies) --> 132
+        70 -- Solo --> 189
+
+        132 --> 250 & 323
+
+        250 --> 323
+        323 -- Solo --> 379
+        323 --> 471
+        471 --> C
 
         96 --> 437 & 405
+        189 --> 437 & 405
+        379 --> 437 & 405
 
         405 --> 342 & 271
         271 --> 342 & 153
@@ -36,10 +54,19 @@
         495(495 Hobgoblin) --> 4
 
         4:::startPoint
+        25:::startPoint
         96:::startPoint
+        189:::startPoint
+        379:::startPoint
         495:::fight
+        70:::fight
+        250:::tip
+        C:::red
 
-        click 96 href "#96" "96 Inn"
+        click 25 href "#25" "25 Inn"
+        click 96 href "#25" "96 Inn"
+        click 189 href "#25" "189 Inn"
+        click 379 href "#25" "379 Inn"
         click 4 href "4.html" "4 Hobgoblin Cave"
     </pre>
 </body>

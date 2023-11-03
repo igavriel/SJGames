@@ -18,18 +18,33 @@
 </script>
 
 <body>
-    <h1>Section 353 - Two faces Giant<A name="353" /></h1>
+    <h1>Section 344<A name="344" /></h1>
     <pre class='mermaid'>
     graph TD
-        353[[353 Two faces Giant]]
-        39[[39 Action 1]]
+        136[[136 Bridge]]
+        344(344
+            Action 35)
+        51(51
+            Action 36)
 
-        TODO-ILAN:::red
+        344 == 1 ==> 86
+        344 == 15 ==> 265
 
-        353:::startPoint
-        39:::endPoint
+        86 --> 136
+        265 --> 173
 
-        click 353 href "#353" "353 Two faces Giant"
+        173 --> 29 & 51 & 136
+
+        51 --> C(Wait for Clovis)
+
+        344:::startPoint
+        136:::startPoint
+        29:::endPoint
+        51:::action
+        C:::red
+
+        click 344 href "#344" "344"
+        click 136 href "136.html" "136 Bridge"
     </pre>
 </body>
 

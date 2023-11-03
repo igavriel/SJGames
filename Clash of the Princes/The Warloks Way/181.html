@@ -23,7 +23,10 @@
     graph TD
         181[[181 Oak Tree]]
         39[[39 Action 1]]
-        60[[60 Toll Bridge]]
+        105[[105 Hydra]]
+        212[[212 Toll Bridge]]
+        60(60 
+            Action 24)
 
         181 --> 92 & 259
         259 --> 476 & 154
@@ -43,15 +46,21 @@
         5(5 Fight) --> 116
         116 --> 60
 
-        60:::startPoint
+        60 == 1,5 ==> 105
+        60 == 4 ==> 212
+
         181:::startPoint
+        105:::startPoint
+        212:::startPoint
         39:::endPoint
+        60:::action
         5:::fight
         476:::luck
 
         click 181 href "#181" "181 Oak Tree"
-        click 60 href "60.html" "60 Tool Bridge"
+        click 105 href "105.html" "105 Hydra"
         click 165 href "165.html" "165 Oak"
+        click 212 href "212.html" "212 Tool Bridge"
     </pre>
 </body>
 

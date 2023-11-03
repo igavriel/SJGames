@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 65 - Pleaos<A name="65" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        65[[65 Pleaos]]
+        344[[344]]
+
+        65 --> 174 & 284
+
+        284(284 Two Servants) --> 338
+        338 --> 180
+
+        174(174 Spear) --> 49
+        49 --> 433 & 492
+
+        492 --> 180
+        433(433 Ring) -->180
+
+        180 --> 100 & 344
+        100(100 Black Knight) --> 36
+        36(36 Oak Charm) -->344
+
+
+        65:::startPoint
+        344:::startPoint
+        100:::fight
+        174:::fight
+        284:::fight
+        36:::tip
+        433:::tip
+
+        click 65 href "#65" "65 Pleaos"
+        click 136 href "136.html" "136 Bridge"
+        click 344 href "344.html" "344"
+    </pre>
+</body>
+
+</html>

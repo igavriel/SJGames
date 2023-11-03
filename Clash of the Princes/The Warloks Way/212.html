@@ -18,22 +18,18 @@
 </script>
 
 <body>
-    <h1>Section 60 - Toll Bridge<A name="60" /></h1>
+    <h1>Section 212 - Toll Bridge<A name="212" /></h1>
     <pre class='mermaid'>
     graph TD
-        60[[60 Toll Bridge
-            Action 24]]
-        105[[105 Hydra]]
+        212[[212 Toll Bridge]]
+        2[[2 Storm]]
         224[[224 One Eyed Man]]
         340[[340 Forest]]
-        353[[353 Two faces Giant]]
         432[[432 Music]]
         204(204 Rainbow)
+        353(353 Two faces Giant)
 
-        60 == 1,5 ==> 105
-        60 == 4 ==> 212
-
-        212(212 Troll) --> 371 & 345
+        212 --> 371 & 345
         371 --> 418
         345(345 Troll) --> 48 & 411
         48 --> 418 & 248 & 143
@@ -45,6 +41,21 @@
         72 --> 432 & 340
 
         418 --> 322 & 353
+
+        353 --> 464 & 483
+        464 --> 394 & 425
+        394(394 Spell) --> 15 & 57 & 94 & 425
+
+        15 --> C-15(Clovis Goto 15)
+        57 -- Clovis Goto 57 --> 224
+        94(94 Giant) -- Clovis Goto 94 --> 498
+
+        498 --> 224
+        498 -- Solo --> 2
+
+        425 --> C(Wait for Clovis)
+
+        483 --> 224
 
         322(322 Leprecon) --> 240 & 204 & 268 & 285
         285 --> 353
@@ -67,19 +78,22 @@
         50 -- Clovis Goto 50 -->  224
         81 -- Clovis Goto 81 -->  224
 
-        60:::startPoint
-        105:::startPoint
+        2:::startPoint
+        212:::startPoint
         224:::startPoint
         340:::startPoint
-        353:::startPoint
         432:::startPoint
+        15:::endPoint
         345:::fight
         183:::red
         162:::tip
         145:::blue
         124:::purple
+        C:::red
+        C-15:::red
 
-        click 60 href "#60" "60 Toll Bridge"
+        click 212 href "#212" "212 Toll Bridge"
+        click 2 href "2.html" "2 Storm"
         click 105 href "105.html" "105 Hydra"
         click 224 href "224.html" "224 One Eyed Man"
         click 340 href "340.html" "340 Forest"
