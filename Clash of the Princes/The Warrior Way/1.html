@@ -24,86 +24,66 @@
     <pre class='mermaid'>
     graph TD
         1[[1 Start]]
-        78[[78 Bridge]]
-        181[[181 Oak Tree]]
-        293[[293 Lake]]
+        18[[18 Bridge]]
+        309[[309 Monastery]]
         497[[497 River]]
-        42(42
-            Action 25)
         148(148 
-            Action 22) 
+            Action 2) 
         199(199
-            Action 23)
-        226(226
-            Action 26)
+            Action 3)
+        377(377
+            Action 5)
 
         1 == Duel ==> 199
         199 == 23 ==> 287
         199 == 1,22 ==> 242 
-        242 --> 325
         287 --> 486 & 455 & 403
-        403(403 Orcs - Windows) == From Clovis ==> 85
-        455(455 Orcs - Solo) --> 85
-        85 --> 9
+        403(403 Orcs - Door) --> 131
+        455(455 Orcs - Windows) == From Lothar ==> 131
+        131 --> 9
         486(486 Orcs - Duel) --> 35 & 9
+
+        242 --> 325
+
         9 --> 306 & 186
-        306 --> 397 & 480
-        397(397 Spell) --> 270 & 169 & 66 & 480
-        66 --> 202
-        480(480 Moth) --> 202
-        480 -- Solo --> 497
-        270 --> 202
-        270 -- Solo --> 497
-        169 --> 360 & 444
-        360(360 Luck) --> 202
-        202 --> 38 & 106
+
+        306(306 Moth) == From Lothar ==> 202
+        202 --> 106 & 38 
         38 --> 106
+        106 -- Solo --> 497
         38 -- Solo --> 497
-        106(106 Cobwebs) --> 293
+
         186(186 Gremlins) --> 230
-        186 -- Solo --> 78
+        186 -- Solo --> 497
         230 --> 306 & 350
-        350 --> 293
+        350 -- Solo --> 497
 
         1 == Solo ==> 148
-        148 == 1,2,3 ==> 325
+        148 == 1,22,23 ==> 325
+        325(325 Cobwebs) --> 102
 
-        325 --> 391 & 363
-        391 --> 467 & 436
-        467(467 Luck) --> 226
-        436 --> 363
-        363(363 Monsters) --> 122 & 254
-        122 --> 42 & 181
-        254 --> 42 & 181
-        226 == 1,4,5 ==> 165
-        42 == 1,4,5 ==> 165
-        165 --> 293
+        102 --> 377 & 18
+
+        377 == 1, 24, 25, 26 ==> 309
 
         1:::startPoint
-        78:::startPoint
-        181:::startPoint
-        293:::startPoint
+        18:::startPoint
+        309:::startPoint
         497:::startPoint
-        42:::action
         148:::action
         199:::action
-        226:::action
+        377:::action
         186:::fight
-        363:::fight
+        306:::fight
+        325:::fight
         403:::fight
         455:::fight
-        480:::fight
         486:::fight
-        360:::luck
-        467:::luck
         35:::endPoint
-        444:::endPoint
 
         click 1 href "#1" "1 Start"
-        click 181 href "181.html" "181 Oak Tree"
-        click 293 href "293.html" "293"
-        click 78 href "209.html" "78 Bridge"
-        click 497 href "209.html" "497 River"
+        click 18 href "18.html" "18 Bridge"
+        click 309 href "309.html" "309 Monastery"
     </pre>
 </body>
 

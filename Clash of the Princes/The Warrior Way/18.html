@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 18 - Bridge<A name="18" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        18[[18 Bridge]]
+        39[[39
+            Action 1]]
+        60[[60
+            Action 4]]
+
+        18 --> 144 & 260
+
+        144(144 Antlion) --> 359
+        359 --> 7 & 396
+        396 --> 184
+        7(7 Giant Fly) --> 386
+        386 --> 184
+        184 --> 60
+
+        260 --> 314 & 410
+        410 --> 393 & 449
+        449 --> 39
+        393 --> 314
+        314(314 Daemon) --> 77
+        77 --> 60 & 321
+        321 --> 39
+        60 == 1,25 ==> 13
+        60 == 24 ==> 212
+        60 == 26 ==> 413
+
+        18:::startPoint
+        60:::action
+        7:::fight
+        144:::fight
+        314:::fight
+        410:::luck
+        39:::endPoint
+
+        click 18 href "#18" "18 Bridge"
+    </pre>
+</body>
+
+</html>

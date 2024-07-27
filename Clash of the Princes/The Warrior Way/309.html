@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 309 - Monastery<A name="1" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        309[[309 Monastery]]
+        39[[39
+            Action 1]]
+
+        309 --> 419 & 195
+
+        419 --> 252 & 91
+        91 --> 252 & 193 & 42
+        42 --> 39
+        193 --> 252
+        252(252 Werewolfs) --> 426
+        426 --> 163
+
+        195 --> 72 & 320
+        320 --> 257 & 369
+        369 --> 39
+        257 --> 72
+        72 --> 117 & 429
+        117(117 Gargouille) --> 429
+        429 --> 163
+        163 --> 100
+        100 --> 19 & 175
+        19(19 Village) --> 133 & 243
+
+        309:::startPoint
+        117:::fight
+        252:::fight
+        320:::luck
+        39:::endPoint
+
+        click 1 href "#1" "1 Start"
+        click 18 href "18.html" "18 Bridge"
+        click 309 href "309.html" "309 Monastery"
+    </pre>
+</body>
+
+</html>
