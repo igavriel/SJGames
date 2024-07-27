@@ -21,7 +21,11 @@
     <h1>Section 18 - Bridge<A name="18" /></h1>
     <pre class='mermaid'>
     graph TD
+        2[[2 Storm]]
         18[[18 Bridge]]
+        100[[100]]
+        224[[224 One Eyed Man]]
+        353(353 Two faces Giant)
         39[[39
             Action 1]]
         60[[60
@@ -43,19 +47,62 @@
         314(314 Daemon) --> 77
         77 --> 60 & 321
         321 --> 39
-        60 == 1,25 ==> 13
-        60 == 24 ==> 212
-        60 == 26 ==> 413
+        60 == 24 Duel ==> 212
+        60 == 1,25 Solo ==> 13
+        60 == 26 Solo ==> 413
 
+        413(413 Bill & Bert) --> 177 & 110
+        110 --> 13
+        177 --> 13
+
+        212 --> 371 & 345
+        371 --> 418
+        345 --> 48
+        345 -- Solo --> 459
+        48 --> 248 & 143 & 418
+        248 --> 418
+        143 --> 418
+
+        418 --> 322 & 353
+
+        13 --> 228 & 385
+        385 --> 100
+        228(228 Troll) --> 459
+        459 --> 299 & 339
+        299 --> 339
+        339 --> 100
+
+        353 --> 464 & 483
+        464 --> 394 & 425
+
+        394 --> C(Wait for Lothar)
+        425 -- Clovis Goto 21 --> 21
+        425 -- Clovis Goto 69 --> 69
+        425 -- Clovis Goto 128 --> 128
+        69(69 Wine) --> 224
+        128 --> 498
+        498 -- Duel --> 224
+        498 -- Solo --> 2
+
+        2:::startPoint
         18:::startPoint
+        100:::startPoint
+        224:::startPoint
         60:::action
         7:::fight
         144:::fight
+        228:::fight
         314:::fight
+        413:::fight
         410:::luck
+        21:::endPoint
         39:::endPoint
+        C:::red
 
         click 18 href "#18" "18 Bridge"
+        click 2 href "2.html" "2 Storm"
+        click 100 href "100.html" "100"
+        click 224 href "224.html" "224 One Eyed Man"
     </pre>
 </body>
 

@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 100<A name="100" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        2[[2 Storm]]
+        100[[100]]
+        224[[224 One Eyed Man]]
+        39[[39
+            Action 1]]
+        367[[367
+            Action 7]]
+
+        100 --> 19 & 175
+
+        175(175 Wishing Well) --> 391 & 384 & 126 & 312
+        312(312 Spell) --> 391 & 384
+        126 --> 445 & 30
+        30 --> 108 & 391 & 384
+        445 --> 391 & 108 & 384
+        108(108 Toad) --> 74
+        74(74 Map) --> 391 & 384
+        391 --> 5 & 384
+
+        384 --> 168 & 149
+        149(149 Witch) --> 281 & 80
+        80(80 Daemon) --> 434
+        434 --> 367
+        281 --> 367
+        168(168 Witch) --> 253
+        253(253 Sweeper) --> 367
+
+        5(5 Mirror) --> 404
+        404 --> 447 & 362
+        362 --> 39
+        447 --> 367
+
+        19(19 Village) --> 133 & 243
+
+        243 --> 133 & 441 & 400
+        441 --> 364
+        400 --> 8 & 499
+        499 --> 367
+        8 --> 23
+
+        133 --> 468 & 36
+        36(36 Rabbit) --> 468 & 135
+        135 --> 367
+        468 --> 23
+        23 --> 364 & 367
+        367 == 1 ==> 2
+        367 == 27 ==> 27
+
+        27 -- Duel --> 224
+
+        364 --> 216 & 180
+        180 --> 367
+        216 --> 262 & 62
+        62 --> 367
+        262 --> 367
+
+        2:::startPoint
+        100:::startPoint
+        224:::startPoint
+        5:::fight
+        80:::fight
+        108:::fight
+        168:::fight
+        367:::action
+        36:::tip
+        74:::tip
+        253:::tip
+        312:::tip
+        126:::luck
+        133:::luck
+        149:::luck
+        216:::luck
+        39:::endPoint
+
+        click 100 href "#100" "100"
+        click 2 href "2.html" "2 Storm"
+        click 18 href "18.html" "18 Bridge"
+        click 224 href "224.html" "224 One Eyed Man"
+        click 309 href "309.html" "309 Monastery"
+    </pre>
+</body>
+
+</html>
