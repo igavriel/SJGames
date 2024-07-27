@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starship Traveler by Steeve Jackson</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 100px;
+            background-color: #333;
+            padding-top: 50px;
+            position: fixed;
+            height: 100%;
+            transition: width 0.3s;
+        }
+        .sidebar.collapsed {
+            width: 50px;
+        }
+        .sidebar a {
+            padding: 6px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: font-size 0.3s, padding 0.3s;
+        }
+        .sidebar.collapsed a {
+            font-size: 10px;
+            padding: 10px 10px;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 100px;
+            padding: 5px;
+            flex-grow: 1;
+            background-color: #f1f1f1;
+            transition: margin-left 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .content.collapsed {
+            margin-left: 50px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <a href="1.html" target="contentFrame">1</a>
+        <a href="2.html" target="contentFrame">2</a>
+        <a href="28.html" target="contentFrame">28</a>
+        <a href="34.html" target="contentFrame">34</a>
+        <a href="44.html" target="contentFrame">44</a>
+        <a href="69.html" target="contentFrame">69</a>
+        <a href="79.html" target="contentFrame">79</a>
+        <a href="89.html" target="contentFrame">89</a>
+        <a href="92.html" target="contentFrame">92</a>
+        <a href="97.html" target="contentFrame">97</a>
+        <a href="104.html" target="contentFrame">104</a>
+        <a href="137.html" target="contentFrame">137</a>
+        <a href="209.html" target="contentFrame">209</a>
+        <a href="226.html" target="contentFrame">226</a>
+        <a href="248.html" target="contentFrame">248</a>
+        <a href="253.html" target="contentFrame">253</a>
+        <a href="258.html" target="contentFrame">258</a>
+        <a href="261.html" target="contentFrame">261</a>
+        <a href="273.html" target="contentFrame">273</a>
+        <a href="324.html" target="contentFrame">324</a>
+        <a href="329.html" target="contentFrame">329</a>
+        <a href="333.html" target="contentFrame">333</a>
+    </div>
+
+    <div class="content" id="content">
+        <iframe name="contentFrame" src="1.html"></iframe>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+            document.getElementById('content').classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>

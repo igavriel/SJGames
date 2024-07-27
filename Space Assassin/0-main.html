@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Assassin by Steeve Jackson</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 100px;
+            background-color: #333;
+            padding-top: 50px;
+            position: fixed;
+            height: 100%;
+            transition: width 0.3s;
+        }
+        .sidebar.collapsed {
+            width: 50px;
+        }
+        .sidebar a {
+            padding: 6px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: font-size 0.3s, padding 0.3s;
+        }
+        .sidebar.collapsed a {
+            font-size: 10px;
+            padding: 10px 10px;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 100px;
+            padding: 5px;
+            flex-grow: 1;
+            background-color: #f1f1f1;
+            transition: margin-left 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .content.collapsed {
+            margin-left: 50px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <a href="1.html" target="contentFrame">1</a>
+        <a href="61.html" target="contentFrame">61</a>
+        <a href="78-102-Planet.html" target="contentFrame">78-102</a>
+        <a href="88.html" target="contentFrame">88</a>
+        <a href="100.html" target="contentFrame">100</a>
+        <a href="134.html" target="contentFrame">134</a>
+        <a href="172.html" target="contentFrame">172</a>
+        <a href="208.html" target="contentFrame">208</a>
+        <a href="247.html" target="contentFrame">247</a>
+        <a href="309.html" target="contentFrame">309</a>
+        <a href="345.html" target="contentFrame">345</a>
+        <a href="373.html" target="contentFrame">373</a>
+        <a href="381-Simulator.html" target="contentFrame">381</a>
+        <a href="382.html" target="contentFrame">382</a>
+    </div>
+
+    <div class="content" id="content">
+        <iframe name="contentFrame" src="1.html"></iframe>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+            document.getElementById('content').classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>
