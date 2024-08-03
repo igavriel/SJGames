@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clash of the Princes -  The Warloks Way - by Steeve Jackson</title>
+    <title>Clash of the Princes - The Warloks Way - by Steeve Jackson</title>
     <style>
         body {
             display: flex;
             margin: 0;
             font-family: Arial, sans-serif;
         }
+
         .sidebar {
             width: 100px;
             background-color: #333;
@@ -18,24 +20,36 @@
             height: 100%;
             transition: width 0.3s;
         }
+
         .sidebar.collapsed {
             width: 50px;
         }
-        .sidebar a {
-            padding: 6px 15px;
+
+        .sidebar a,
+        .sidebar button {
+            padding: 3px 15px;
             text-decoration: none;
             font-size: 18px;
             color: white;
             display: block;
             transition: font-size 0.3s, padding 0.3s;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
         }
-        .sidebar.collapsed a {
+
+        .sidebar.collapsed a,
+        .sidebar.collapsed button {
             font-size: 10px;
-            padding: 10px 10px;
+            padding: 8px 8px;
         }
-        .sidebar a:hover {
+
+        .sidebar a:hover,
+        .sidebar button:hover {
             background-color: #575757;
         }
+
         .content {
             margin-left: 100px;
             padding: 5px;
@@ -47,14 +61,17 @@
             align-items: center;
             min-height: 100vh;
         }
+
         .content.collapsed {
             margin-left: 50px;
         }
+
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+
         .toggle-btn {
             position: fixed;
             top: 10px;
@@ -68,38 +85,27 @@
         }
     </style>
 </head>
+
 <body>
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     <div class="sidebar" id="sidebar">
         <a href="1.html" target="contentFrame">1</a>
         <a href="2.html" target="contentFrame">2</a>
+        <a href="6.html" target="contentFrame">6</a>
         <a href="18.html" target="contentFrame">18</a>
+        <a href="25.html" target="contentFrame">25, 96</a>
+        <a href="87.html" target="contentFrame">87, 432</a>
         <a href="100.html" target="contentFrame">100</a>
-        <a href="309.html" target="contentFrame">309</a>
-        <!--a href="2.html" target="contentFrame">2</a>
-        <a href="4.html" target="contentFrame">4</a>
-        <a href="65.html" target="contentFrame">65</a>
-        <a href="96.html" target="contentFrame">96</a>
-        <a href="105.html" target="contentFrame">105</a>
-        <a href="136.html" target="contentFrame">136</a>
         <a href="137.html" target="contentFrame">137</a>
-        <a href="181.html" target="contentFrame">181</a>
-        <a href="209.html" target="contentFrame">209</a>
-        <a href="210.html" target="contentFrame">210</a>
-        <a href="212.html" target="contentFrame">212</a>
-        <a href="223.html" target="contentFrame">223</a>
+        <a href="140.html" target="contentFrame">140</a>
+        <a href="142.html" target="contentFrame">142</a>
+        <a href="201.html" target="contentFrame">201</a>
         <a href="224.html" target="contentFrame">224</a>
-        <a href="227.html" target="contentFrame">227</a>
-        <a href="257.html" target="contentFrame">257</a>
-        <a href="293.html" target="contentFrame">293</a>
-        <a href="340.html" target="contentFrame">340</a>
-        <a href="344.html" target="contentFrame">344</a>
-        <a href="366.html" target="contentFrame">366</a>
-        <a href="398.html" target="contentFrame">398</a>
-        <a href="432.html" target="contentFrame">432</a>
-        <a href="435.html" target="contentFrame">435</a>
-        <a href="463.html" target="contentFrame">463</a>
-        <a href="473.html" target="contentFrame">473</a-->
+        <a href="256.html" target="contentFrame">256</a>
+        <a href="309.html" target="contentFrame">309</a>
+        <a href="382.html" target="contentFrame">382</a>
+        <a href="map.html" target="contentFrame">map</a>
+        <button id="back-button" disabled onclick="goBack()">Back</button>
     </div>
 
     <div class="content" id="content">
@@ -107,10 +113,36 @@
     </div>
 
     <script>
+        let historyStack = ['1.html']; // Initial page
+
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('collapsed');
             document.getElementById('content').classList.toggle('collapsed');
         }
+
+        function goBack() {
+            if (historyStack.length > 1) {
+                historyStack.pop(); // Remove current URL
+                const previousURL = historyStack[historyStack.length - 1];
+                document.querySelector('iframe[name="contentFrame"]').src = previousURL;
+                if (historyStack.length === 1) {
+                    document.getElementById('back-button').disabled = true;
+                }
+            }
+        }
+
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', (event) => {
+                event.preventDefault();
+                const href = anchor.getAttribute('href');
+                document.querySelector('iframe[name="contentFrame"]').src = href;
+                if (historyStack[historyStack.length - 1] !== href) {
+                    historyStack.push(href);
+                    document.getElementById('back-button').disabled = false;
+                }
+            });
+        });
     </script>
 </body>
+
 </html>

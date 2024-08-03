@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 382 - Cave<A name="382" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        382[[382 Cave]]
+        432[[432 Mountain]]
+        39[[39
+            Action 1]]
+
+        382 --> 101 & 489
+
+        489 --> 121 & 174
+        174 --> 192
+        121 --> 192
+
+        192 --> 300 & 443 & 491 & 310
+        300 --> 39
+        491 --> 39
+        310 --> 432
+        443 --> 101
+
+        101 --> 114 & 251 & 432
+        114 --> 479
+        251 --> 479
+        479(479 Suffocating) --> 432
+
+        382:::startPoint
+        432:::startPoint
+        479:::Fight
+        39:::endPoint
+
+        click 382 href "#382" "382 Cave"
+        click 432 href "87.html" "432 Mountain"
+    </pre>
+</body>
+
+</html>

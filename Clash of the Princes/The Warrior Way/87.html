@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 87, 432 - Mountain<A name="87" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        87[[87 - Mountain]]
+        432[[432 - Mountain]]
+        137[[137 Ice Worm]]
+        201[[201 Pegasus]]
+
+        87 --> 137 & 201
+        432 --> 137 & 201
+
+        87:::startPoint
+        432:::startPoint
+        137:::startPoint
+        201:::startPoint
+
+        click 87 href "#87" "87 - Mountain"
+        click 432 href "#87" "432 - Mountain"
+        click 137 href "137.html" "137 Ice Worm"
+        click 201 href "201.html" "201 Pegasus"
+    </pre>
+</body>
+
+</html>

@@ -1,25 +1,51 @@
-table.Tables {
-    width: 100%;
-    background-color: #ffffff;
+table {
     border-collapse: collapse;
-    border-width: 2pt;
-    border-color: #0400ff;
-    border-style: solid;
-    color: #000000;
+    background: linear-gradient(145deg, #e0d4b4, #e9c984);
+    background-size: cover;
+    color: #000; /* Adjust text color if needed for readability */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #8b6e4f; /* Slight darker border to match the old map */
 }
 
-table.Tables td,
-table.Tables th {
-    border-width: 2pt;
-    border-color: #0400ff;
-    border-style: solid;
+.border-diagonal  {
+    background:  linear-gradient(to right top, 
+    #e0d4b4 0%,#e0d4b4 49.9%,
+    blue 50%, blue 58%,
+    #e0d4b4 51.1%, #e0d4b4 100%) !important;
+}
+
+.border-reverse-diagonal  {
+    background:  linear-gradient(to left top, 
+    #e0d4b4 0%,#e0d4b4 49.9%,
+    blue 50%, blue 58%,
+    #e0d4b4 51.1%, #e0d4b4 100%) !important;
+}
+
+td,
+th {
+    width: 30;
+    height: 30;
+    border: 1pt solid black;
     padding: 5px;
     text-align: center;
     vertical-align: top;
 }
 
-table.Tables thead {
-    background-color: #ffffff;
+/* Individual border styles */
+.border-top {
+    border-top: 5px solid blue;
+}
+
+.border-bottom {
+    border-bottom: 5px solid blue;
+}
+
+.border-left {
+    border-left: 5px solid blue;
+}
+
+.border-right {
+    border-right: 5px solid blue;
 }
 
 .startPoint>rect,

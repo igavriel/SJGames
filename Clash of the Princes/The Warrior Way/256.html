@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 256 - Cave<A name="256" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        256[[256 Cave]]
+        432[[432 Mountain]]
+        39[[39
+            Action 1]]
+        39-1[[39
+            Action 1]]
+        39-2[[39
+            Action 1]]
+    
+        256 --> 97 & 392
+        97 --> 93 & 258
+        93 --> 22 & 166
+        22 --> 76 & 166
+        76(76 Spider) --> 166
+
+        166 --> 463 & 395 & 340
+        395 --> 56
+        340 --> 56 & 234
+        234 --> 39
+        463 --> 222 & 56
+        222 --> 45 & 280
+        45 --> 39
+        280 --> 258
+
+        56(56 Ice Warrior) --> 280
+
+        392 --> 356 & 495
+        495 --> 39
+        356 --> 93 & 258
+
+        258 --> 329 & 398 & 476
+
+        329 --> 423 & 14
+        398(398 Snake) --> 329 & 476
+        
+        423(423 Dwarves) --> 139
+        139 --> 476
+        
+        14 --> 476 & 398
+        
+        476 --> 349 & 208
+        349 --> 39-1
+        208 --> 382
+
+        382 --> 101 & 489
+
+        489 --> 121 & 174
+        174 --> 192
+        121 --> 192
+
+        192 --> 300 & 443 & 491 & 310
+        300 --> 39-2
+        491 --> 39-2
+        310 --> 432
+        443 --> 101
+
+        101 --> 114 & 251 & 432
+        114 --> 479
+        251 --> 479
+        479(479 Suffocating) --> 432
+
+
+        256:::startPoint
+        432:::startPoint
+        56:::Fight
+        76:::Fight
+        423:::Fight
+        479:::Fight
+        398:::Tip
+        222:::Luck
+        392:::Luck
+        39:::endPoint
+        39-1:::endPoint
+        39-2:::endPoint
+
+        click 256 href "#256" "256 Cave"
+        click 432 href "87.html" "432 Mountain"
+    </pre>
+</body>
+
+</html>
