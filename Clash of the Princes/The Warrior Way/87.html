@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 87, 432 - Mountain<A name="87" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        87[[87 Mountain]]
+        432[[432 Mountain]]
+        25[[25 Inn]]
+        96[[96 Inn]]
+        39[[39
+            Action 1]]
+        217(217 
+            Action 1) 
+        453(453
+            Action 10)
+        L-96(Lothar Goto 96)
+
+        87 --> 137 & 201
+        432 --> 137 & 201
+
+        201(201 Pegasus) --> 90 & 308
+        308 --> 92 & 205
+        92(92 Pocket) --> 461
+        205(205 Table) --> 39
+        90 --> 461
+        461(461 Giant) --> 474
+        474 --> 453
+        453 == 1, 29 ==> 96
+        453 == 28,30 ==> 289
+
+        137(137 Ice Worm) --> 215 & 296
+        296 --> 217
+        215(215 Ice Warm) --> 49
+        49(49 map) --> 217
+
+        217 == 1 ==> 96
+        217 == 28 ==> 142
+        217 == 29 ==> 493
+        217 == 30 ==> 289
+
+        289 -- Duel --> 25
+
+        493(493 Slaves) -- Cube 6 --> 298
+        493 --> 381
+        381 -- Duel --> 25
+        
+        142(142 Slaves) -- Cube 6 --> 466
+        466 --> L-96
+        142 --> L-96
+        142 --> 402
+
+        402 -- Lothar Goto 289 --> 289
+
+        25:::startPoint
+        87:::startPoint
+        96:::startPoint
+        432:::startPoint
+        461:::Fight
+        215:::Fight
+        49:::Tip
+        217:::action
+        453:::action
+        39:::endPoint
+        298:::endPoint
+        466:::endPoint
+        L-96:::red
+
+        click 87 href "#87" "87 Mountain"
+        click 432 href "#87" "432 Mountain"
+        click 25 href "25.html" "25 Inn"
+        click 96 href "25.html" "96 Inn"
+        click 49 href "map.html" "map"
+    </pre>
+</body>
+
+</html>

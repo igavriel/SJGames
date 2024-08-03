@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 140 - Hills<A name="140" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        140[[140 Hills]]
+        6[[6 Three Wolves]]
+        256[[256 Cave]]
+        39[[39
+            Action 1]]
+
+        140 --> 259 & 75
+        75 --> 477 & 324 & 153
+        477 --> 324 & 153
+
+        153(153 Giant Bat) --> 277
+        277 --> 307 & 435
+
+        307 --> 89 & 171
+        435 --> 307 & 53
+        53(53 Bear) --> 210 & 334
+        210(210 Bear) --> 437
+        334(334 Bear) --> 437
+        437(437 Flashlight) --> 307
+
+        324 --> 231 & 118
+        118 --> 89 & 171
+        89 --> 171
+        171 --> 256 & 6
+        231 --> 328 & 64
+        328 --> 39
+        64 --> 171
+        259 --> 256
+
+        140:::startPoint
+        6:::startPoint
+        256:::startPoint
+        153:::Fight
+        210:::Fight
+        334:::Fight
+        231:::Luck
+        324:::Luck
+        437:::tip
+        39:::endPoint
+
+        click 140 href "#140" "140 Hills"
+        click 6 href "6.html" "6 Three Wolves"
+        click 256 href "256.html" "256 Cave"
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 6 - Three Wolves<A name="6" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        6[[6 Three Wolves]]
+        87[[87 Mountain]]
+        382[[382 Cave]]
+        39[[39
+            Action 1]]
+
+        6 --> 292 & 330 & 274
+
+        330 --> 278 & 20
+        278 --> 191
+        20 --> 207 & 157
+        274(274 Two Wolves) --> 207
+
+        292 --> 191 & 472
+        472 --> 442 & 191 & 397
+        442 --> 95 & 191
+        95 --> 191
+        397 --> 207
+        191(191 Three Wolves) --> 207
+
+        207 --> 233 & 157
+
+        233(233 Leach) --> 87
+
+        157 --> 284 & 266
+        284(284 Well) --> 226 & 355
+        226 --> 411 & 165
+        165 --> 28
+
+        411(411 Armor) --> 316 & 59
+        316 --> 39
+        59 --> 87
+
+        355 --> 28
+        28 --> 382
+        266(266 Cave) --> 65
+        65 --> 355 & 170
+        170 --> 87
+
+        6:::startPoint
+        87:::startPoint
+        382:::startPoint
+        191:::Fight
+        233:::Fight
+        266:::fight
+        274:::Fight
+        292:::Luck
+        330:::Luck
+        411:::tip
+        39:::endPoint
+
+        click 6 href "#6" "6 Three Wolves"
+        click 87 href "87.html" "87 Mountain"
+        click 382 href "382.html" "382 Cave"
+    </pre>
+</body>
+
+</html>
