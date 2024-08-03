@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 201 - Pegasus<A name="201" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        201[[201 Pegasus]]
+        
+        201 --> TODO
+
+        201:::startPoint
+
+        click 201 href "#201" "201 Pegasus"
+
+        click 256 href "256.html" "256 Cave"
+    </pre>
+</body>
+
+</html>

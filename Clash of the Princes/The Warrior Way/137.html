@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Sections 137 - Ice Worm<A name="137" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        137[[137 Ice Worm]]
+        25[[25 Inn]]
+        96[[96 Inn]]
+        142[[142 Slaves]]
+        493[[493 Slaves]]
+        217(217 
+            Action 1) 
+
+        137 --> 215 & 296
+        296 --> 217
+        215(215 Ice Warm) --> 49
+        49(49 map) --> 217
+
+        217 == 1 ==> 96
+        217 == 28 ==> 142
+        217 == 29 ==> 493
+        217 == 30 ==> 289
+
+        289 -- Duel --> 25
+
+        137:::startPoint
+        25:::startPoint
+        96:::startPoint
+        142:::startPoint
+        493:::startPoint
+        217:::action
+        215:::Fight
+        49:::Tip
+
+        click 137 href "#137" "137 Ice Worm"
+        click 25 href "25.html" "25 Inn"
+        click 96 href "25.html" "96 Inn"
+        click 142 href "142.html" "142 Slaves"
+        click 493 href "493.html" "493 Slaves"
+        click 49 href "map.html" "map"
+    </pre>
+</body>
+
+</html>
