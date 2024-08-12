@@ -22,12 +22,80 @@
     <pre class='mermaid'>
     graph TD
         224[[224 One Eyed Man]]
+        140[[140 Hills]]
+        446[[446 Hills]]
 
-        224 --> TODO
+        224 --> 458 & 304
 
+        458 --> 383
+        458 -- Solo --> 446
+        304 --> 383
+        304 -- Solo --> 446
+
+        383 --> 214 & 420
+
+        214 --> 236 & 357
+        357(357 Graves) --> 11
+        357 -- Solo --> 446
+
+        236 --> 179 & 357
+
+        11 --> 179 & 236
+
+        179(179 Death) --> 272 & 332 & 406
+        272 --> 496
+        332 --> 496
+        406 --> 496
+
+        496 -- Solo --> 446
+        496 -- Duel --> 107
+
+        420 --> 83 & 47
+    
+        47 --> B(Lothar Goto 6)
+        47 -- Lothar Goto 478 --> 478
+
+        478 --> 83 & 283 & 399
+        283 --> 438 & 343
+
+        438 --> B(Lothar Goto 6)
+        438 --> 225
+        225 --> 343
+
+        343 --> 98 & 146
+        146 -- Duel --> 107
+        146 -- Solo --> 446
+
+        83 --> C(Wait for Lothar)
+
+        107(107 Three Old women) --> 152 & 247 & 351 & 469
+
+        152 --> 389
+        247 --> 389
+        351 --> 389
+        469 -- Lothar Goto 3 --> 3
+        469 -- Lothar Goto 73 --> 73
+
+        3 --> 389
+        73 --> 389
+
+        389 --> 140
+
+        140:::startPoint
         224:::startPoint
+        446:::startPoint
+        98:::endPoint
+        399:::endPoint
+        47:::fight
+        357:::fight
+        438:::fight
+        B:::red
+        C:::red
 
         click 224 href "#224" "224 One Eyed Man"
+        click 140 href "140.html" "140 Hills"
+        click 318 href "2.html" "318 Hills"
+        click 446 href "2.html" "446 Hills"
     </pre>
 </body>
 

@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    const config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true },
+        securityLevel: 'loose',
+    };
+
+    mermaid.initialize(config);
+</script>
+
+<body>
+    <h1>Section 418 - Forest<A name="18" /></h1>
+    <pre class='mermaid'>
+    graph TD
+        2[[2 Storm]]
+        418[[418 Forest]]
+        204(204 Rainbow)
+        224[[224 One Eyed Man]]
+        353(353 Two faces Giant)
+
+        418 --> 322 & 353
+
+        322(322 Leprecon) --> 285 & 268 & 240 & 204
+        240 --> 204
+
+        204 --> 183(183 red)
+        204 --> 124(124 purple)
+        204 --> 145(145 blue)
+        204 --> 162(162 green)
+
+        285 --> 353
+        268 --> 353
+
+        
+        183 --> 124
+        183 --> 145
+        183 --> 162
+
+        162 --> 353
+        145 --> 224
+        124 == Wait For Lothar ==> 81 & 50
+
+        50 -->  224
+        81 -->  224
+
+        353 --> 464 & 483
+        464 --> 394 & 425
+
+        483 --> 224
+
+        394 --> C(Wait for Lothar)
+        425 == Clovis Goto 21 ==> 21
+        425 -- Clovis Goto 69 --> 69
+        425 -- Clovis Goto 128 --> 128
+        69(69 Wine) --> 224
+        128 --> 498
+        498 -- Duel --> 224
+        498 -- Solo --> 2
+
+        2:::startPoint
+        418:::startPoint
+        224:::startPoint
+        21:::endPoint
+        183:::red
+        162:::tip
+        145:::blue
+        124:::purple
+        C:::red
+
+        click 18 href "#18" "18 Bridge"
+        click 2 href "2.html" "2 Storm"
+        click 100 href "100.html" "100 River"
+        click 224 href "224.html" "224 One Eyed Man"
+    </pre>
+</body>
+
+</html>

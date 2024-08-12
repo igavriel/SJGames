@@ -51,7 +51,7 @@
         406 --> 496
 
         496 -- Solo --> 63
-        496 --> 107
+        496 -- Duel --> 107
 
         420 --> 83 & 47
         83 --> 159 & 198 & 130 & 47
@@ -60,7 +60,20 @@
         159 -- Clovis Goto 159 --> 107 & 446
         198 -- Clovis Goto 198 --> 107 & 446
 
-        47 --> C(Wait for Clovis)
+        47 --> C(Wait for Clovis) --> 478
+
+        478 --> 83 & 283 & 399
+        283 --> 438 & 343
+
+        438 -- Wait for Clovis --> 6
+        438 -- Wait for Clovis --> 225
+        6 --> 257
+        225 --> 343
+
+        343 --> 98 & 146
+        146 -- Duel --> 107
+        146 -- Solo --> 446
+
 
         107(107 Three Old women) --> 152 & 247 & 351 & 469
 
@@ -80,6 +93,8 @@
         257:::startPoint
         318:::startPoint
         446:::startPoint
+        98:::endPoint
+        399:::endPoint
         357:::fight
         C:::red
 
@@ -87,7 +102,6 @@
         click 63 href "2.html" "63 Hills"
         click 318 href "2.html" "318 Hills"
         click 446 href "2.html" "446 Hills"
-        click 107 href "107.html" "107 3 Old women"
         click 257 href "257.html" "257 Forest"
     </pre>
 </body>
